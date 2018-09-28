@@ -1,0 +1,18 @@
+[2017-06-09 03:23:45]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-09 03:23:45]db error : ["42S22",1054,"Unknown column 'startime' in 'field list'"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-09 03:48:17]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-09 03:48:17]db error : ["42S22",1054,"Unknown column 'startime' in 'field list'"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-09 03:49:04]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-09 03:49:04]db error : ["42S22",1054,"Unknown column 'startime' in 'field list'"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1

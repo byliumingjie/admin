@@ -1,0 +1,10 @@
+[2017-06-02 05:05:28]db error : ["42S02",1146,"Table 'minosdb.game_wechat_account_bind' doesn't exist"] sql:SELECT  count(*) as cont FROM minosdb.game_wechat_account_bind
+	where playerId = :playerId and wechat_name =:wechat_name limit 1
+[2017-06-02 05:07:09]db error : ["42S02",1146,"Table 'minosdb.game_wechat_account_bind' doesn't exist"] sql:SELECT  count(*) as cont FROM minosdb.game_wechat_account_bind
+	where playerId = :playerId and wechat_name =:wechat_name limit 1
+[2017-06-02 05:07:09]db error : ["42S02",1146,"Table 'minosdb.game_wechat_account_bind' doesn't exist"] sql:SELECT  count(*) as cont FROM minosdb.game_wechat_account_bind
+	where playerId = :playerId and wechat_name =:wechat_name limit 1
+[2017-06-02 05:38:54]db error : ["HY093",null,null] sql:SELECT  count(*) as cont FROM minosdb.game_wechat_account_bind
+	where playerId =:playerId and wechat_name= wechat_name 
+[2017-06-02 05:38:55]db error : ["HY093",null,null] sql:SELECT  count(*) as cont FROM minosdb.game_wechat_account_bind
+	where playerId =:playerId and wechat_name= wechat_name 

@@ -1,0 +1,4 @@
+2018-09-28 16:42:46 SELECT * FROM game_activity_config   
+2018-09-28 16:43:37 SELECT * FROM game_activity_config   
+2018-09-28 16:43:40 SELECT * FROM game_activity_config   
+2018-09-28 16:44:16 SELECT * FROM game_activity_config   

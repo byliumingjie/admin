@@ -1,0 +1,101 @@
+[2017-06-30 09:50:58]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498787458</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_3_3]]></EventKey>
+</xml>
+[2017-06-30 09:51:03]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498787463</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[刚刚]]></Content>
+<MsgId>6437243137652100459</MsgId>
+</xml>
+[2017-06-30 09:51:11]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498787471</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.minosgame.com]]></EventKey>
+<MenuId>411731936</MenuId>
+</xml>
+[2017-06-30 09:51:18]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498787478</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_1]]></EventKey>
+</xml>
+[2017-06-30 09:51:20]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498787480</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_1]]></EventKey>
+</xml>
+[2017-06-30 09:51:23]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498787483</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_2]]></EventKey>
+</xml>
+[2017-06-30 10:01:59]post data
+[2017-06-30 04:12:23]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810343</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_1]]></EventKey>
+</xml>
+[2017-06-30 04:12:26]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810346</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_2]]></EventKey>
+</xml>
+[2017-06-30 04:12:30]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810350</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_0]]></EventKey>
+</xml>
+[2017-06-30 04:12:32]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810352</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_1]]></EventKey>
+</xml>
+[2017-06-30 04:12:33]post data
+[2017-06-30 04:12:33]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810353</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_2]]></EventKey>
+</xml>
+[2017-06-30 04:12:35]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810355</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_3_2]]></EventKey>
+</xml>
+[2017-06-30 04:14:10]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810450</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_1]]></EventKey>
+</xml>
+[2017-06-30 04:15:42]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498810542</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_1]]></EventKey>
+</xml>

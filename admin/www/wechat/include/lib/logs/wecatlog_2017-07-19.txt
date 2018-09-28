@@ -1,0 +1,23 @@
+[2017-07-19 08:33:51]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v56CRsUBZvXfXXMyH6rGqIE]]></FromUserName>
+<CreateTime>1500467631</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.minosgame.com]]></EventKey>
+<MenuId>411731936</MenuId>
+</xml>
+[2017-07-19 08:34:07]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v56CRsUBZvXfXXMyH6rGqIE]]></FromUserName>
+<CreateTime>1500467647</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.minosgame.com]]></EventKey>
+<MenuId>411731936</MenuId>
+</xml>
+[2017-07-19 08:34:19]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v56CRsUBZvXfXXMyH6rGqIE]]></FromUserName>
+<CreateTime>1500467659</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_2]]></EventKey>
+</xml>

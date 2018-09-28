@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root platform_id="1" server_id="4" maxnum="600">
+  		<system heartbeat="300" closeclientpacketsize="50"/>
+  		<res configrespath="res"/><center tick="50" addr="127.0.0.1" count="10"/><redeem tick="50" addr="172.168.100.200" count="8"/><arena tick="50" addr="127.0.0.1" count="10"/><server><logic tick="50" addr="10" count="10"/><login_in tick="50" addr="127.0.0.1" count="10"/></server><db db_addr="10" db_user="10" db_password="10" db_name="globaldb" db_charset="gbk"/><censusdb db_addr="rm-2ze454qswm5ykqtyjo.mysql.rds.aliyuncs.com" db_user="minosdbsa" db_password="minos@0810_+" db_name="apple_census" db_charset="gbk"/><gameaccountdb db_addr="192.168.0.140" db_user="liumj" db_password="liumj!@#2018" db_name="admin" db_charset="gbk"/><globaldb db_addr="192.168.0.140" db_user="liumj" db_password="liumj!@#2018" db_name="globaldb" db_charset="gbk"/><manager addr="+" port="61343" signkey="123"/></root>

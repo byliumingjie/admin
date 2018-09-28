@@ -1,0 +1,8 @@
+[2017-07-10 05:14:51]datainfo::: player sql 222select * from minosdb.game_wechat_push 
+	WHERE wechat_user ='ovDA6v2_zvnVpjQofPotQ3GJZe5s' 
+	AND boot_level=1
+	AND expiry>1499677791
+	LIMIT 1
+[2017-07-10 05:14:51]datainfo::: player sql 333
+[2017-07-10 05:14:51]datainfo::: player sql 444
+[2017-07-10 05:14:51]datainfo::: player sql 555

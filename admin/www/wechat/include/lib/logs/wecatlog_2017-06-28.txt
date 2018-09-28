@@ -1,0 +1,44 @@
+[2017-06-28 01:13:41]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v4JXK5s6kIh-YIs4IeiJcc8]]></FromUserName>
+<CreateTime>1498583621</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+[2017-06-28 09:47:45]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498657665</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_3_3]]></EventKey>
+</xml>
+[2017-06-28 09:47:49]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498657668</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_3_3]]></EventKey>
+</xml>
+[2017-06-28 09:47:55]post data
+[2017-06-28 09:47:59]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498657679</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[哦亏HK
+]]></Content>
+<MsgId>6436685719616528071</MsgId>
+</xml>
+[2017-06-28 09:48:11]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498657691</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[家里]]></Content>
+<MsgId>6436685771156135627</MsgId>
+</xml>
+[2017-06-28 09:48:17]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1498657697</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_2]]></EventKey>
+</xml>

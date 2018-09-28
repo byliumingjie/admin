@@ -1,0 +1,230 @@
+[2017-06-27 11:39:08]00
+[2017-06-27 11:39:08]01
+[2017-06-27 11:39:08] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:39:08] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:39:08] GetActivityInfo 1
+[2017-06-27 11:39:08]22
+[2017-06-27 11:39:08]33
+[2017-06-27 11:39:08]44
+[2017-06-27 11:39:08]55
+[2017-06-27 11:39:08]66
+[2017-06-27 11:39:08]77
+[2017-06-27 11:39:08]88
+[2017-06-27 11:39:08]99
+[2017-06-27 11:39:08]1010
+[2017-06-27 11:39:08]1111
+[2017-06-27 11:39:08]1212
+[2017-06-27 11:39:08]1313
+[2017-06-27 11:44:37]00
+[2017-06-27 11:44:37]01
+[2017-06-27 11:44:37] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:44:37] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:44:37] GetActivityInfo 1
+[2017-06-27 11:44:37]22
+[2017-06-27 11:44:37]33
+[2017-06-27 11:44:37]44
+[2017-06-27 11:44:37]55
+[2017-06-27 11:44:37]66
+[2017-06-27 11:44:37]77
+[2017-06-27 11:44:37]88
+[2017-06-27 11:44:37]99
+[2017-06-27 11:44:37]1010
+[2017-06-27 11:44:37]1111
+[2017-06-27 11:44:37]1212
+[2017-06-27 11:44:37]1313
+[2017-06-27 11:45:57]00
+[2017-06-27 11:45:57]01
+[2017-06-27 11:45:57] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:45:57] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:45:57] GetActivityInfo 1
+[2017-06-27 11:45:57]22
+[2017-06-27 11:45:57]33
+[2017-06-27 11:45:57]44
+[2017-06-27 11:45:57]55
+[2017-06-27 11:45:57]66
+[2017-06-27 11:45:57]77
+[2017-06-27 11:45:57]88
+[2017-06-27 11:45:57]99
+[2017-06-27 11:45:57]1010
+[2017-06-27 11:45:57]1111
+[2017-06-27 11:45:57]1212
+[2017-06-27 11:45:57]1313
+[2017-06-27 11:46:50]00
+[2017-06-27 11:46:50]01
+[2017-06-27 11:46:50] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:46:50] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:46:50] GetActivityInfo 1
+[2017-06-27 11:46:50]22
+[2017-06-27 11:46:50]33
+[2017-06-27 11:46:50]44
+[2017-06-27 11:46:50]55
+[2017-06-27 11:46:50]66
+[2017-06-27 11:46:50]77
+[2017-06-27 11:46:50]88
+[2017-06-27 11:46:50]99
+[2017-06-27 11:46:50]1010
+[2017-06-27 11:46:50]1111
+[2017-06-27 11:46:50]1212
+[2017-06-27 11:46:50]1313
+[2017-06-27 11:50:29]00
+[2017-06-27 11:50:29]01
+[2017-06-27 11:50:29] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:50:29] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:50:29] GetActivityInfo 1
+[2017-06-27 11:50:29]22
+[2017-06-27 11:50:29]33
+[2017-06-27 11:50:29]44
+[2017-06-27 11:50:29]55
+[2017-06-27 11:50:29]66
+[2017-06-27 11:50:29]77
+[2017-06-27 11:50:29]88
+[2017-06-27 11:50:29]99
+[2017-06-27 11:50:29]1010
+[2017-06-27 11:50:29]1111
+[2017-06-27 11:50:29]1212
+[2017-06-27 11:50:29]1313
+[2017-06-27 11:50:35]00
+[2017-06-27 11:50:35]01
+[2017-06-27 11:50:35] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:50:35] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:50:35] GetActivityInfo 1
+[2017-06-27 11:51:30]00
+[2017-06-27 11:51:30]01
+[2017-06-27 11:51:30] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:51:30] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:51:31] GetActivityInfo 1
+[2017-06-27 11:55:08]00
+[2017-06-27 11:55:08]01
+[2017-06-27 11:55:08] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:08] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:08] GetActivityInfo 1
+[2017-06-27 11:55:08]22
+[2017-06-27 11:55:08]33
+[2017-06-27 11:55:08]44
+[2017-06-27 11:55:08]55
+[2017-06-27 11:55:08]66
+[2017-06-27 11:55:08]77
+[2017-06-27 11:55:08]88
+[2017-06-27 11:55:08]99
+[2017-06-27 11:55:08]1010
+[2017-06-27 11:55:08]1111
+[2017-06-27 11:55:08]1212
+[2017-06-27 11:55:08]1313
+[2017-06-27 11:55:19]00
+[2017-06-27 11:55:19]01
+[2017-06-27 11:55:19] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:19] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:19] GetActivityInfo 1
+[2017-06-27 11:55:30]00
+[2017-06-27 11:55:30]01
+[2017-06-27 11:55:30] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:30] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:30] GetActivityInfo 1
+[2017-06-27 11:55:30]22
+[2017-06-27 11:55:30]33
+[2017-06-27 11:55:30]44
+[2017-06-27 11:55:30]55
+[2017-06-27 11:55:30]66
+[2017-06-27 11:55:30]77
+[2017-06-27 11:55:30]88
+[2017-06-27 11:55:30]99
+[2017-06-27 11:55:30]1010
+[2017-06-27 11:55:30]1111
+[2017-06-27 11:55:30]1212
+[2017-06-27 11:55:30]1313
+[2017-06-27 11:55:58]00
+[2017-06-27 11:55:58]01
+[2017-06-27 11:55:58] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:58] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:55:58] GetActivityInfo 1
+[2017-06-27 11:55:58]22
+[2017-06-27 11:55:58]33
+[2017-06-27 11:55:58]44
+[2017-06-27 11:55:58]55
+[2017-06-27 11:55:58]66
+[2017-06-27 11:55:58]77
+[2017-06-27 11:55:58]88
+[2017-06-27 11:55:58]99
+[2017-06-27 11:55:58]1010
+[2017-06-27 11:55:58]1111
+[2017-06-27 11:55:58]1212
+[2017-06-27 11:55:58]1313
+[2017-06-27 11:59:09]00
+[2017-06-27 11:59:09]01
+[2017-06-27 11:59:09] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:59:09] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 11:59:09] GetActivityInfo 1
+[2017-06-27 11:59:09]22
+[2017-06-27 11:59:09]33
+[2017-06-27 11:59:09]44
+[2017-06-27 11:59:09]55
+[2017-06-27 11:59:09]66
+[2017-06-27 11:59:09]77
+[2017-06-27 11:59:09]88
+[2017-06-27 11:59:09]99
+[2017-06-27 11:59:09]1010
+[2017-06-27 11:59:09]1111
+[2017-06-27 11:59:09]1212
+[2017-06-27 11:59:09]1313
+[2017-06-27 12:01:54]00
+[2017-06-27 12:01:54]01
+[2017-06-27 12:01:54] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:01:54] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:01:54] GetActivityInfo 1
+[2017-06-27 12:01:59]00
+[2017-06-27 12:01:59]01
+[2017-06-27 12:01:59] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:01:59] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:01:59] GetActivityInfo 1
+[2017-06-27 12:02:45]00
+[2017-06-27 12:02:45]01
+[2017-06-27 12:02:45] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:02:45] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:02:45] GetActivityInfo 1
+[2017-06-27 12:09:08]00
+[2017-06-27 12:09:08]01
+[2017-06-27 12:09:08] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:09:08] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:09:08] GetActivityInfo 1
+[2017-06-27 12:09:11]00
+[2017-06-27 12:09:11]01
+[2017-06-27 12:09:11] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:09:11] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:09:11] GetActivityInfo 1
+[2017-06-27 12:10:27]00
+[2017-06-27 12:10:27]01
+[2017-06-27 12:10:27] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:10:27] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:10:27] GetActivityInfo 1
+[2017-06-27 12:12:54]00
+[2017-06-27 12:12:54]01
+[2017-06-27 12:12:54] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:12:54] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:12:54] GetActivityInfo 1
+[2017-06-27 12:13:13]00
+[2017-06-27 12:13:13]01
+[2017-06-27 12:13:13] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:13:13] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:13:13] GetActivityInfo 1
+[2017-06-27 12:13:13]22
+[2017-06-27 12:13:13]33
+[2017-06-27 12:13:13]44
+[2017-06-27 12:13:13]55
+[2017-06-27 12:13:13]66
+[2017-06-27 12:13:13]77
+[2017-06-27 12:13:13]88
+[2017-06-27 12:13:13]99
+[2017-06-27 12:13:13]1010
+[2017-06-27 12:13:13]1111
+[2017-06-27 12:13:13]1212
+[2017-06-27 12:13:13]1313
+[2017-06-27 12:13:25]00
+[2017-06-27 12:13:25]01
+[2017-06-27 12:13:25] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:13:25] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:13:25] GetActivityInfo 1
+[2017-06-27 12:13:34]00
+[2017-06-27 12:13:34]01
+[2017-06-27 12:13:34] GetActivityInfo 0{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:13:34] GetActivityInfo 22{"activityType":1,"server_id":"1","player_id":"TS000X00UOW","wechat_name":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","Rules":"GetActivityInfo"}
+[2017-06-27 12:13:34] GetActivityInfo 1

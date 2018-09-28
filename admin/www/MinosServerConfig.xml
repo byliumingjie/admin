@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root server_id="01" maxnum="3000">
+	<center>
+		<node addr="127.0.0.1" port="51001"/>
+		<node addr="127.0.0.1" port="51002"/>
+		<node addr="127.0.0.1" port="51003"/>
+		<node addr="127.0.0.1" port="51004"/>
+	</center>
+	<server>
+		<logic>
+			<node addr="127.0.0.1" port="52001"/>
+			<node addr="127.0.0.1" port="52002"/>
+			<node addr="127.0.0.1" port="52003"/>
+			<node addr="127.0.0.1" port="52004"/>
+		</logic>
+		<login_in>
+		    <node addr="127.0.0.1" port="53001"/>
+			<node addr="127.0.0.1" port="53002"/>
+			<node addr="127.0.0.1" port="53003"/>
+			<node addr="127.0.0.1" port="53004"/>
+		</login_in>
+		<login_out>
+		    <node addr="0.0.0.0" port="40001"/>
+			<node addr="0.0.0.0" port="40002"/>
+			<node addr="0.0.0.0" port="40003"/>
+			<node addr="0.0.0.0" port="40004"/> 
+		</login_out>
+	</server>
+	<db db_addr="127.0.0.1" db_user="minosdbsa" db_password="123456" db_name="minosdb"/>
+	<censusdb db_addr="172.168.100.83" db_user="minosdbsa" db_password="123456" db_name="minos_census_db"/>
+	<res configrespath="C:\MinosServer\res\"/>
+</root>

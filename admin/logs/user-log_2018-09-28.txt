@@ -1,0 +1,4 @@
+2018-09-28 15:48:15 platOut::["1"] 
+2018-09-28 15:48:15 {"errcode":0,"msg":"\u533a\u670d\u4fe1\u606f\u83b7\u53d6\u6210\u529f!","beenselect":[[1,"\u5185\u7f51\u6d4b\u8bd5\u5e73\u53f0"]],"waitselect":[]} 
+2018-09-28 15:48:21 platOut::["1"] 
+2018-09-28 15:48:21 {"errcode":0,"msg":"\u533a\u670d\u4fe1\u606f\u83b7\u53d6\u6210\u529f!","beenselect":[[1,"\u5185\u7f51\u6d4b\u8bd5\u5e73\u53f0"]],"waitselect":[]} 

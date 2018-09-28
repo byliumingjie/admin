@@ -1,0 +1,11 @@
+[2017-07-20 12:39:20]datainfo:::sql 111
+[2017-07-20 12:39:20]datainfo:::sql 22
+[2017-07-20 12:39:20]datainfo:::sql 33
+[2017-07-20 12:39:20]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+		FROM admin.tb_platform as a 
+		WHERE  platformId in 
+		(
+		SELECT platformId FROM admin.tb_platform
+		WHERE type =:type AND platformId !=0
+		) AND type = 0 ;
+[2017-07-20 12:39:20]datainfo:::sql 55

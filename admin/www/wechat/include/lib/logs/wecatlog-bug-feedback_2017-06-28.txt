@@ -1,0 +1,18 @@
+[2017-06-28 09:47:59]BUG Feedback ::11
+[2017-06-28 09:47:59]BUG Feedback ::22 type-#2
+[2017-06-28 09:47:59]BUG Feedback ::22-11
+[2017-06-28 09:47:59]BUG Feedback ::22-12
+[2017-06-28 09:47:59]BUG Feedback ::22-13 type:::2
+[2017-06-28 09:47:59]BUG Feedback ::22-13 wechatPush:::{"id":"1","wechat_user":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","step":"1","boot_level":"1","playerId":"","type":"2","expiry":"1498657969","data":"Array","createtime":"2017-06-28 21:47:49"}
+[2017-06-28 09:47:59]BUG Feedback ::33
+[2017-06-28 09:47:59]BUG Feedback ::44
+[2017-06-28 09:47:59]BUG Feedback ::55
+[2017-06-28 09:48:00]BUG Feedback ::66
+[2017-06-28 09:48:00]BUG Feedback ::77
+[2017-06-28 09:48:11]BUG Feedback ::11
+[2017-06-28 09:48:11]BUG Feedback ::22 type-#2
+[2017-06-28 09:48:11]BUG Feedback ::22-11
+[2017-06-28 09:48:11]BUG Feedback ::22-12
+[2017-06-28 09:48:11]BUG Feedback ::22-13 type:::2
+[2017-06-28 09:48:11]BUG Feedback ::22-13 wechatPush:::{"id":"1","wechat_user":"ovDA6v2_zvnVpjQofPotQ3GJZe5s","step":"0","boot_level":"1","playerId":"","type":"2","expiry":"1498657979","data":"Array","createtime":"2017-06-28 21:48:00"}
+[2017-06-28 09:48:11]BUG Feedback ::33

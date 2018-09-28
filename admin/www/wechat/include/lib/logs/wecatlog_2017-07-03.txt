@@ -1,0 +1,44 @@
+[2017-07-03 09:14:00]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v1onlc14-JIQ6cM8VSk_RCQ]]></FromUserName>
+<CreateTime>1499087640</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_1]]></EventKey>
+</xml>
+[2017-07-03 09:14:07]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v1onlc14-JIQ6cM8VSk_RCQ]]></FromUserName>
+<CreateTime>1499087647</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.minosgame.com]]></EventKey>
+<MenuId>411731936</MenuId>
+</xml>
+[2017-07-03 09:14:10]post data
+[2017-07-03 09:54:22]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1499090062</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_3_2]]></EventKey>
+</xml>
+[2017-07-03 09:54:27]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1499090067</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_0_1]]></EventKey>
+</xml>
+[2017-07-03 09:54:29]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1499090069</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_2]]></EventKey>
+</xml>
+[2017-07-03 09:54:38]post data<xml><ToUserName><![CDATA[gh_a76796f7d05a]]></ToUserName>
+<FromUserName><![CDATA[ovDA6v2_zvnVpjQofPotQ3GJZe5s]]></FromUserName>
+<CreateTime>1499090078</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[rselfmenu_2_0]]></EventKey>
+</xml>

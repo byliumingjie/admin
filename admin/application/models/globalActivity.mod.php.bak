@@ -1,0 +1,81 @@
+<?php
+
+/* 
+ * 平台版本更新 model
+ */
+class GlobalActivity_Model extends Model{
+    
+    private $table = 'game_global_activity';
+    private $db = null;
+     
+    public function __construct($region='')
+    {
+    	parent::__construct();
+    	if (!empty($region)){
+    		$this->db = Mysql::database('',$region);
+    	}
+    }    
+    /**
+     * +活动分页 +
+     * +activity info total+
+     * */
+    public function activityTotal($data='')
+    {
+    	$dat = ' '.$data;
+    
+    	if (empty($data))
+    	{
+    		$sql = "CALL globaldb.PROC_STAT_PAGING('GlobalActivity','total',
+    		'globaldb','','',\"{$dat}\")";
+    	}else{
+    		$sql = "CALL globaldb.PROC_STAT_PAGING('GlobalActivity','total',
+    		'globaldb','','',\"{$dat}\")";
+    	}
+    	__log_message($sql,'db');
+    
+    	if($this->db->query($sql) && $this->db->rowcount() > 0)
+    	{
+    		$rows =$this->db->fetch_row();
+    		return $rows;
+    	}
+    }
+    /**
+     * +activity list info+
+     * */
+    public  function activityInfo($data="",$page="",$pagesize="")
+    {
+    	$limit = '';
+    	$dat = ' '.$data;
+    
+    	if(!empty($page) && !empty($pagesize))
+    	{
+    		$offset = ($page-1) * $pagesize;
+    
+    		$limit  = ' LIMIT '.$offset.','.$pagesize;
+    	}
+    	if(empty($data))
+    	{
+    		$sql = "CALL globaldb.PROC_STAT_PAGING('GlobalActivity','TotalPaging',
+    		'globaldb','','{$limit}',\"{$dat}\")";
+    	}
+    	else
+    	{
+    		$sql = "CALL globaldb.PROC_STAT_PAGING('GlobalActivity','TotalPaging',
+    		'globaldb','','{$limit}',\"{$dat}\")";
+    	}
+    	__log_message($sql,'db');
+    
+    	if($this->db->query($sql) && $this->db->rowcount() > 0)
+    	{
+    		$rows =$this->db->fetch_all();
+    		return $rows;
+    	}
+    }
+    // 获取区服的活动有效期时间    
+    public function getActivityServerLog()
+    { 	
+    	return ;
+    }    
+    
+}
+

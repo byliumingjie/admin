@@ -1,0 +1,16 @@
+[2017-06-28 09:47:59]datainfo::: player sql 222select * from minosdb.game_wechat_push 
+	WHERE wechat_user ='ovDA6v2_zvnVpjQofPotQ3GJZe5s' 
+	AND boot_level=1
+	AND expiry>1498657379
+	LIMIT 1
+[2017-06-28 09:47:59]datainfo::: player sql 333
+[2017-06-28 09:47:59]datainfo::: player sql 444
+[2017-06-28 09:47:59]datainfo::: player sql 555
+[2017-06-28 09:48:11]datainfo::: player sql 222select * from minosdb.game_wechat_push 
+	WHERE wechat_user ='ovDA6v2_zvnVpjQofPotQ3GJZe5s' 
+	AND boot_level=1
+	AND expiry>1498657391
+	LIMIT 1
+[2017-06-28 09:48:11]datainfo::: player sql 333
+[2017-06-28 09:48:11]datainfo::: player sql 444
+[2017-06-28 09:48:11]datainfo::: player sql 555

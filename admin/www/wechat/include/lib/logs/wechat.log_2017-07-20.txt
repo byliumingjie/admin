@@ -1,0 +1,4 @@
+[2017-07-20 12:39:20]datainfo::: usernamev03d1f7NxEZ5a2WOE27jlQdmfwbRthopd/PIPjN4T8I=PlayerId:::TP001100NGQserverId1/
+[2017-07-20 12:39:20]datainfo:::00000
+[2017-07-20 12:39:20]datainfo:::111111
+[2017-07-20 12:39:20]datainfo:::44444

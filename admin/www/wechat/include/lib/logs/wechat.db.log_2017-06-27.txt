@@ -1,0 +1,140 @@
+[2017-06-27 11:39:08]datainfo:::sql 111
+[2017-06-27 11:39:08]datainfo:::sql 22
+[2017-06-27 11:39:08]datainfo:::sql 33
+[2017-06-27 11:39:08]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+	FROM admin.tb_platform as a 
+	WHERE  platformId in 
+	(
+	SELECT platformId FROM admin.tb_platform
+	WHERE type =:type AND platformId !=0
+	) AND type = 0 ;
+[2017-06-27 11:39:08]datainfo:::sql 55
+[2017-06-27 11:39:08]datainfo:::sql 66
+[2017-06-27 11:39:08]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:39:08]datainfo:::sq l88
+[2017-06-27 11:44:37]datainfo:::sql 111
+[2017-06-27 11:44:37]datainfo:::sql 22
+[2017-06-27 11:44:37]datainfo:::sql 33
+[2017-06-27 11:44:37]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+	FROM admin.tb_platform as a 
+	WHERE  platformId in 
+	(
+	SELECT platformId FROM admin.tb_platform
+	WHERE type =:type AND platformId !=0
+	) AND type = 0 ;
+[2017-06-27 11:44:37]datainfo:::sql 55
+[2017-06-27 11:44:37]datainfo:::sql 66
+[2017-06-27 11:44:37]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:44:37]datainfo:::sq l88
+[2017-06-27 11:45:57]datainfo:::sql 111
+[2017-06-27 11:45:57]datainfo:::sql 22
+[2017-06-27 11:45:57]datainfo:::sql 33
+[2017-06-27 11:45:57]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+	FROM admin.tb_platform as a 
+	WHERE  platformId in 
+	(
+	SELECT platformId FROM admin.tb_platform
+	WHERE type =:type AND platformId !=0
+	) AND type = 0 ;
+[2017-06-27 11:45:57]datainfo:::sql 55
+[2017-06-27 11:45:57]datainfo:::sql 66
+[2017-06-27 11:45:57]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:45:57]datainfo:::sq l88
+[2017-06-27 11:46:50]datainfo:::sql 111
+[2017-06-27 11:46:50]datainfo:::sql 22
+[2017-06-27 11:46:50]datainfo:::sql 33
+[2017-06-27 11:46:50]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+	FROM admin.tb_platform as a 
+	WHERE  platformId in 
+	(
+	SELECT platformId FROM admin.tb_platform
+	WHERE type =:type AND platformId !=0
+	) AND type = 0 ;
+[2017-06-27 11:46:50]datainfo:::sql 55
+[2017-06-27 11:46:50]datainfo:::sql 66
+[2017-06-27 11:46:50]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:46:50]datainfo:::sq l88
+[2017-06-27 11:50:29]datainfo:::sql 111
+[2017-06-27 11:50:29]datainfo:::sql 22
+[2017-06-27 11:50:29]datainfo:::sql 33
+[2017-06-27 11:50:29]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+	FROM admin.tb_platform as a 
+	WHERE  platformId in 
+	(
+	SELECT platformId FROM admin.tb_platform
+	WHERE type =:type AND platformId !=0
+	) AND type = 0 ;
+[2017-06-27 11:50:29]datainfo:::sql 55
+[2017-06-27 11:50:29]datainfo:::sql 66
+[2017-06-27 11:50:29]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:50:29]datainfo:::sq l88
+[2017-06-27 11:55:08]datainfo:::sql 111
+[2017-06-27 11:55:08]datainfo:::sql 22
+[2017-06-27 11:55:08]datainfo:::sql 33
+[2017-06-27 11:55:08]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+		FROM admin.tb_platform as a 
+		WHERE  platformId in 
+		(
+		SELECT platformId FROM admin.tb_platform
+		WHERE type =:type AND platformId !=0
+		) AND type = 0 ;
+[2017-06-27 11:55:08]datainfo:::sql 55
+[2017-06-27 11:55:08]datainfo:::sql 66
+[2017-06-27 11:55:08]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:55:08]datainfo:::sq l88
+[2017-06-27 11:55:30]datainfo:::sql 111
+[2017-06-27 11:55:30]datainfo:::sql 22
+[2017-06-27 11:55:30]datainfo:::sql 33
+[2017-06-27 11:55:30]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+		FROM admin.tb_platform as a 
+		WHERE  platformId in 
+		(
+		SELECT platformId FROM admin.tb_platform
+		WHERE type =:type AND platformId !=0
+		) AND type = 0 ;
+[2017-06-27 11:55:30]datainfo:::sql 55
+[2017-06-27 11:55:30]datainfo:::sql 66
+[2017-06-27 11:55:30]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:55:30]datainfo:::sq l88
+[2017-06-27 11:55:58]datainfo:::sql 111
+[2017-06-27 11:55:58]datainfo:::sql 22
+[2017-06-27 11:55:58]datainfo:::sql 33
+[2017-06-27 11:55:58]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+		FROM admin.tb_platform as a 
+		WHERE  platformId in 
+		(
+		SELECT platformId FROM admin.tb_platform
+		WHERE type =:type AND platformId !=0
+		) AND type = 0 ;
+[2017-06-27 11:55:58]datainfo:::sql 55
+[2017-06-27 11:55:58]datainfo:::sql 66
+[2017-06-27 11:55:58]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:55:58]datainfo:::sq l88
+[2017-06-27 11:59:09]datainfo:::sql 111
+[2017-06-27 11:59:09]datainfo:::sql 22
+[2017-06-27 11:59:09]datainfo:::sql 33
+[2017-06-27 11:59:09]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+		FROM admin.tb_platform as a 
+		WHERE  platformId in 
+		(
+		SELECT platformId FROM admin.tb_platform
+		WHERE type =:type AND platformId !=0
+		) AND type = 0 ;
+[2017-06-27 11:59:09]datainfo:::sql 55
+[2017-06-27 11:59:09]datainfo:::sql 66
+[2017-06-27 11:59:09]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 11:59:09]datainfo:::sq l88
+[2017-06-27 12:13:13]datainfo:::sql 111
+[2017-06-27 12:13:13]datainfo:::sql 22
+[2017-06-27 12:13:13]datainfo:::sql 33
+[2017-06-27 12:13:13]datainfo:::sql 44 sqlSELECT mysqlhost,db,mysqluse,mysqlpasswprd 
+		FROM admin.tb_platform as a 
+		WHERE  platformId in 
+		(
+		SELECT platformId FROM admin.tb_platform
+		WHERE type =:type AND platformId !=0
+		) AND type = 0 ;
+[2017-06-27 12:13:13]datainfo:::sql 55
+[2017-06-27 12:13:13]datainfo:::sql 66
+[2017-06-27 12:13:13]datainfo:::sql 77 data{"mysqlhost":"rm-bp1f4ujg69ry14bcno.mysql.rds.aliyuncs.com","db":"minos_game_server","mysqluse":"minosphp","mysqlpasswprd":"a!php345"}
+[2017-06-27 12:13:13]datainfo:::sq l88

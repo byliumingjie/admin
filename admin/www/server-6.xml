@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root platform_id="1" server_id="6" maxnum="3000">
+  		<system heartbeat="300" closeclientpacketsize="50"/>
+  		<res configrespath="res"/><center tick="50" addr="127.0.0.1" count="5"/><redeem tick="50" addr="121.0.0.1" count="4"/><arena tick="50" addr="127.0.0.1" count="5"/><server><logic tick="50" addr="1.0.0.2" count="5"/><login_in tick="50" addr="127.0.0.1" count="5"/></server></root>

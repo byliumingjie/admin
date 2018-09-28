@@ -1,0 +1,10 @@
+<?php
+	include_once "../include/lib/log.php";
+	include_once "../include/lib/mysql.lib.php";
+	
+	$data = file_get_contents("php://input");
+
+	$dataOut = json_decode($data,true);
+	_log("datainfo:::".$data,'weixin-upload-log.txt'); 
+
+?>

@@ -1,0 +1,10 @@
+enum PhoneNumber {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+}
+message phonemsg {
+	required string name = 1;
+	optional string email = 2;		
+	repeated PhoneNumber phoneda = 3; 
+}

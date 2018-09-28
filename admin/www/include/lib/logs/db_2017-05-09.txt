@@ -1,0 +1,47 @@
+
+[2017-05-09 05:31:56]datainfo:::{"ExclusiveKey":"123456","ImageId":"1","NickName":"经典小妖","PlatformId":"1","PlayerId":"TS0009006S0","ServerId":"1"}
+[2017-05-09 05:39:34]datainfo:::{"ExclusiveKey":"123456","ImageId":"1","NickName":"经典小妖","PlatformId":"1","PlayerId":"TS0009006S0","ServerId":"1"}
+[2017-05-09 05:42:39]datainfo:::{"ExclusiveKey":"123456","ImageId":"1","NickName":"经典小妖","PlatformId":"1","PlayerId":"TS0009006S0","ServerId":"1"}
+[2017-05-09 05:42:39]db error : ["23000",1062,"Duplicate entry 'TS0009006S0-1' for key 'playerIdIndex'"] sql: INSERT INTO role_face_upload (`platformId`,`ServerId`,`playId`,`nickname`,`image`,`createTime`)
+		VALUES (?,?,?,?,?,?)
+[2017-05-09 05:42:39]录入失败{"platformId":"1","ServerId":"1","playId":"TS0009006S0","nickname":"\u7ecf\u5178\u5c0f\u5996","image":"1","createTime":"2017-05-09 17:42:39"}
+[2017-05-09 05:58:17]datainfo:::
+[2017-05-09 06:42:09]datainfo:::{"ExclusiveKey":"123456","ImageId":"1","NickName":"经典小妖","PlatformId":"1","PlayerId":"TS0009006S0","ServerId":"1"}
+[2017-05-09 06:42:09]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET ExclusiveKey = '123456',\r\n\ttype = 1 ,\r\n\tServerId =1 ,\r\n\tcreateTime = now(),\r' at line 3"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE 
+	SET ExclusiveKey = '123456',
+	type = 1 ,
+	ServerId =1 ,
+	createTime = now(),
+	platformId=1,
+	NickName = '经典小妖'
+	
+[2017-05-09 06:42:09]录入失败{"PlatformId":"1","ServerId":"1","PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":"1","ExclusiveKey":"123456","createTime":"2017-05-09 18:42:09"}
+[2017-05-09 06:45:23]datainfo:::{"ExclusiveKey":"123456","ImageId":"1","NickName":"经典小妖","PlatformId":"1","PlayerId":"TS0009006S0","ServerId":"1"}
+[2017-05-09 06:45:23]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET ExclusiveKey = '123456'' at line 3"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE 
+	SET ExclusiveKey = '123456'
+	
+	
+[2017-05-09 06:45:23]录入失败{"PlatformId":"1","ServerId":"1","PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":"1","ExclusiveKey":"123456","createTime":"2017-05-09 18:45:23"}
+[2017-05-09 06:48:17]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET role_face_upload.ExclusiveKey = ''' at line 3"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE 
+	SET role_face_upload.ExclusiveKey = ''
+[2017-05-09 06:48:17]录入失败{"PlatformId":1,"ServerId":1,"PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":1,"ExclusiveKey":"123456","createTime":"2017-05-09 18:48:17"}
+[2017-05-09 06:48:37]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET role_face_upload.ExclusiveKey = '123456'' at line 3"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE 
+	SET role_face_upload.ExclusiveKey = '123456'
+[2017-05-09 06:48:37]录入失败{"PlatformId":1,"ServerId":1,"PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":1,"ExclusiveKey":"123456","createTime":"2017-05-09 18:48:37"}
+[2017-05-09 06:49:07]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET role_face_upload.ExclusiveKey = '123456'' at line 2"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE SET role_face_upload.ExclusiveKey = '123456'
+[2017-05-09 06:49:07]录入失败{"PlatformId":1,"ServerId":1,"PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":1,"ExclusiveKey":"123456","createTime":"2017-05-09 18:49:07"}
+[2017-05-09 06:49:21]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET role_face_upload.ExclusiveKey = '123456'' at line 2"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE SET role_face_upload.ExclusiveKey = '123456'
+[2017-05-09 06:49:21]录入失败{"PlatformId":1,"ServerId":1,"PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":1,"ExclusiveKey":"123456","createTime":"2017-05-09 18:49:21"}
+[2017-05-09 06:49:30]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET ExclusiveKey='123456'' at line 2"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE SET ExclusiveKey='123456'
+[2017-05-09 06:49:30]录入失败{"PlatformId":1,"ServerId":1,"PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":1,"ExclusiveKey":"123456","createTime":"2017-05-09 18:49:30"}
+[2017-05-09 06:49:30]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SET ExclusiveKey='123456'' at line 2"] sql: INSERT INTO role_face_upload (`PlatformId`,`ServerId`,`PlayerId`,`NickName`,`ImageId`,`ExclusiveKey`,`createTime`)
+		VALUES (?,?,?,?,?,?,?)  ON DUPLICATE KEY UPDATE SET ExclusiveKey='123456'
+[2017-05-09 06:49:30]录入失败{"PlatformId":1,"ServerId":1,"PlayerId":"TS0009006S0","NickName":"\u7ecf\u5178\u5c0f\u5996","ImageId":1,"ExclusiveKey":"123456","createTime":"2017-05-09 18:49:30"}
+[2017-05-09 06:57:45]datainfo:::{"ExclusiveKey":"123456","ImageId":"1","NickName":"经典小妖","PlatformId":"1","PlayerId":"TS0009006S0","ServerId":"1"}

@@ -1,0 +1,141 @@
+[2017-06-08 05:17:24]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913444limit 1
+[2017-06-08 05:17:24]db error : ["42000",1064,"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1' at line 3"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913444limit 1
+[2017-06-08 05:18:19]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913499  limit 1
+[2017-06-08 05:18:19]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913499  limit 1
+[2017-06-08 05:18:20]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913500  limit 1
+[2017-06-08 05:18:20]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913500  limit 1
+[2017-06-08 05:18:20]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913500  limit 1
+[2017-06-08 05:18:20]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913500  limit 1
+[2017-06-08 05:18:20]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913500  limit 1
+[2017-06-08 05:18:20]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime > 1496913500  limit 1
+[2017-06-08 05:19:11]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime >: endtime  limit 1
+[2017-06-08 05:19:12]db error : ["HY093",null,null] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime >: endtime  limit 1
+[2017-06-08 05:19:43]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime >:endtime  limit 1
+[2017-06-08 05:19:43]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = :id  AND endtime >:endtime  limit 1
+[2017-06-08 05:20:25]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime >1496913625  limit 1
+[2017-06-08 05:20:25]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime >1496913625  limit 1
+[2017-06-08 05:20:26]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime >1496913626  limit 1
+[2017-06-08 05:20:26]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime >1496913626  limit 1
+[2017-06-08 05:20:26]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime >1496913626  limit 1
+[2017-06-08 05:20:26]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime >1496913626  limit 1
+[2017-06-08 05:20:35]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime>1496913635  limit 1
+[2017-06-08 05:20:35]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime>1496913635  limit 1
+[2017-06-08 05:20:46]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime>now()  limit 1
+[2017-06-08 05:20:46]db error : ["42S02",1146,"Table 'admin.tb_login_notice' doesn't exist"] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM tb_login_notice 
+	    where id = 1  AND endtime>now()  limit 1
+[2017-06-08 05:21:15]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where id = 1  AND endtime>now()  limit 1
+[2017-06-08 05:21:15]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where id = 1  AND endtime>now()  limit 1
+[2017-06-08 05:21:16]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where id = 1  AND endtime>now()  limit 1
+[2017-06-08 05:22:02]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 05:22:25]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 05:23:43]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = :platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:23:43]db error : ["HY093",null,null] sql:SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = :platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:24:43]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = :platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:11]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:11]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:12]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:12]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:12]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:13]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId  AND endtime>:endtime  limit 1
+[2017-06-08 05:25:45]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId    limit 1
+[2017-06-08 05:25:45]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId    limit 1
+[2017-06-08 05:25:45]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId =:platformId    limit 1
+[2017-06-08 05:26:00]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 05:30:27]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 05:34:44]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 05:43:56]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 05:44:10]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1
+[2017-06-08 06:05:02]post-data11SELECT id,platformId,title,titlecolor,
+	    context,startime,endtime FROM globaldb.tb_login_notice 
+	    where platformId = 1  AND endtime>now()  limit 1

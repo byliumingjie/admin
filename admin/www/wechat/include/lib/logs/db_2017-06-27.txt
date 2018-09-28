@@ -1,0 +1,254 @@
+[2017-06-27 11:39:08]cdkinfo setSql  1
+[2017-06-27 11:39:08]cdkinfo setSql  2
+[2017-06-27 11:39:08]cdkinfo setSql  3
+[2017-06-27 11:39:08]cdkinfo setSql 10
+[2017-06-27 11:39:08]cdkinfo 33
+[2017-06-27 11:39:08]cdkinfo 34
+[2017-06-27 11:39:08]cdkinfo setSql  1
+[2017-06-27 11:39:08]cdkinfo setSql  2
+[2017-06-27 11:39:08]cdkinfo setSql  3
+[2017-06-27 11:39:08]cdkinfo setSql 4
+[2017-06-27 11:39:08]cdkinfo setSql 5
+[2017-06-27 11:39:08]cdkinfo setSql 6
+[2017-06-27 11:39:08]cdkinfo setSql 7
+[2017-06-27 11:39:08]cdkinfo end 1
+[2017-06-27 11:39:08]cdkinfo end 2
+[2017-06-27 11:39:08]cdkinfo ::1
+[2017-06-27 11:39:08]cdkinfo ::1-1
+[2017-06-27 11:44:37]cdkinfo setSql  1
+[2017-06-27 11:44:37]cdkinfo setSql  2
+[2017-06-27 11:44:37]cdkinfo setSql  3
+[2017-06-27 11:44:37]cdkinfo setSql 10
+[2017-06-27 11:44:37]cdkinfo 33
+[2017-06-27 11:44:37]cdkinfo 34
+[2017-06-27 11:44:37]cdkinfo setSql  1
+[2017-06-27 11:44:37]cdkinfo setSql  2
+[2017-06-27 11:44:37]cdkinfo setSql  3
+[2017-06-27 11:44:37]cdkinfo setSql 4
+[2017-06-27 11:44:37]cdkinfo setSql 5
+[2017-06-27 11:44:37]cdkinfo setSql 6
+[2017-06-27 11:44:37]cdkinfo setSql 7
+[2017-06-27 11:44:37]cdkinfo end 1
+[2017-06-27 11:44:37]cdkinfo end 2
+[2017-06-27 11:44:37]cdkinfo ::1
+[2017-06-27 11:44:37]cdkinfo ::1-1
+[2017-06-27 11:45:57]cdkinfo setSql  1
+[2017-06-27 11:45:57]cdkinfo setSql  2
+[2017-06-27 11:45:57]cdkinfo setSql  3
+[2017-06-27 11:45:57]cdkinfo setSql 10
+[2017-06-27 11:45:57]cdkinfo 33
+[2017-06-27 11:45:57]cdkinfo 34
+[2017-06-27 11:45:57]cdkinfo setSql  1
+[2017-06-27 11:45:57]cdkinfo setSql  2
+[2017-06-27 11:45:57]cdkinfo setSql  3
+[2017-06-27 11:45:57]cdkinfo setSql 4
+[2017-06-27 11:45:57]cdkinfo setSql 5
+[2017-06-27 11:45:57]cdkinfo setSql 6
+[2017-06-27 11:45:57]cdkinfo setSql 7
+[2017-06-27 11:45:57]cdkinfo end 1
+[2017-06-27 11:45:57]cdkinfo end 2
+[2017-06-27 11:45:57]cdkinfo ::1
+[2017-06-27 11:45:57]cdkinfo ::1-1
+[2017-06-27 11:46:50]cdkinfo setSql  1
+[2017-06-27 11:46:50]cdkinfo setSql  2
+[2017-06-27 11:46:50]cdkinfo setSql  3
+[2017-06-27 11:46:50]cdkinfo setSql 10
+[2017-06-27 11:46:50]cdkinfo 33
+[2017-06-27 11:46:50]cdkinfo 34
+[2017-06-27 11:46:50]cdkinfo setSql  1
+[2017-06-27 11:46:50]cdkinfo setSql  2
+[2017-06-27 11:46:50]cdkinfo setSql  3
+[2017-06-27 11:46:50]cdkinfo setSql 4
+[2017-06-27 11:46:50]cdkinfo setSql 5
+[2017-06-27 11:46:50]cdkinfo setSql 6
+[2017-06-27 11:46:50]cdkinfo setSql 7
+[2017-06-27 11:46:50]cdkinfo end 1
+[2017-06-27 11:46:50]cdkinfo end 2
+[2017-06-27 11:46:50]cdkinfo ::1
+[2017-06-27 11:46:50]cdkinfo ::1-1
+[2017-06-27 11:50:29]cdkinfo setSql  1
+[2017-06-27 11:50:29]cdkinfo setSql  2
+[2017-06-27 11:50:29]cdkinfo setSql  3
+[2017-06-27 11:50:29]cdkinfo setSql 10
+[2017-06-27 11:50:29]cdkinfo 33
+[2017-06-27 11:50:29]cdkinfo 34
+[2017-06-27 11:50:29]cdkinfo setSql  1
+[2017-06-27 11:50:29]cdkinfo setSql  2
+[2017-06-27 11:50:29]cdkinfo setSql  3
+[2017-06-27 11:50:29]cdkinfo setSql 4
+[2017-06-27 11:50:29]cdkinfo setSql 5
+[2017-06-27 11:50:29]cdkinfo setSql 6
+[2017-06-27 11:50:29]cdkinfo setSql 7
+[2017-06-27 11:50:29]cdkinfo end 1
+[2017-06-27 11:50:29]cdkinfo end 2
+[2017-06-27 11:50:29]cdkinfo ::1
+[2017-06-27 11:50:29]cdkinfo ::1-1
+[2017-06-27 11:50:35]cdkinfo setSql  1
+[2017-06-27 11:50:35]cdkinfo setSql  2
+[2017-06-27 11:50:35]cdkinfo setSql  3
+[2017-06-27 11:50:35]cdkinfo setSql 4
+[2017-06-27 11:50:35]cdkinfo setSql 5
+[2017-06-27 11:50:35]cdkinfo setSql 6
+[2017-06-27 11:50:35]cdkinfo setSql 7
+[2017-06-27 11:51:30]cdkinfo setSql  1
+[2017-06-27 11:51:31]cdkinfo setSql  2
+[2017-06-27 11:51:31]cdkinfo setSql  3
+[2017-06-27 11:51:31]cdkinfo setSql 4
+[2017-06-27 11:51:31]cdkinfo setSql 5
+[2017-06-27 11:51:31]cdkinfo setSql 6
+[2017-06-27 11:51:31]cdkinfo setSql 7
+[2017-06-27 11:55:08]cdkinfo setSql  1
+[2017-06-27 11:55:08]cdkinfo setSql  2
+[2017-06-27 11:55:08]cdkinfo setSql  3
+[2017-06-27 11:55:08]cdkinfo setSql 10
+[2017-06-27 11:55:08]cdkinfo 33
+[2017-06-27 11:55:08]cdkinfo 34
+[2017-06-27 11:55:08]cdkinfo setSql  1
+[2017-06-27 11:55:08]cdkinfo setSql  2
+[2017-06-27 11:55:08]cdkinfo setSql  3
+[2017-06-27 11:55:08]cdkinfo setSql 4
+[2017-06-27 11:55:08]cdkinfo setSql 5
+[2017-06-27 11:55:08]cdkinfo setSql 6
+[2017-06-27 11:55:08]cdkinfo setSql 7
+[2017-06-27 11:55:08]cdkinfo end 1
+[2017-06-27 11:55:08]cdkinfo end 2
+[2017-06-27 11:55:08]cdkinfo ::1
+[2017-06-27 11:55:08]cdkinfo ::1-1
+[2017-06-27 11:55:19]cdkinfo setSql  1
+[2017-06-27 11:55:19]cdkinfo setSql  2
+[2017-06-27 11:55:19]cdkinfo setSql  3
+[2017-06-27 11:55:19]cdkinfo setSql 4
+[2017-06-27 11:55:19]cdkinfo setSql 5
+[2017-06-27 11:55:19]cdkinfo setSql 6
+[2017-06-27 11:55:19]cdkinfo setSql 7
+[2017-06-27 11:55:30]cdkinfo setSql  1
+[2017-06-27 11:55:30]cdkinfo setSql  2
+[2017-06-27 11:55:30]cdkinfo setSql  3
+[2017-06-27 11:55:30]cdkinfo setSql 10
+[2017-06-27 11:55:30]cdkinfo 33
+[2017-06-27 11:55:30]cdkinfo 34
+[2017-06-27 11:55:30]cdkinfo setSql  1
+[2017-06-27 11:55:30]cdkinfo setSql  2
+[2017-06-27 11:55:30]cdkinfo setSql  3
+[2017-06-27 11:55:30]cdkinfo setSql 4
+[2017-06-27 11:55:30]cdkinfo setSql 5
+[2017-06-27 11:55:30]cdkinfo setSql 6
+[2017-06-27 11:55:30]cdkinfo setSql 7
+[2017-06-27 11:55:30]cdkinfo end 1
+[2017-06-27 11:55:30]cdkinfo end 2
+[2017-06-27 11:55:30]cdkinfo ::1
+[2017-06-27 11:55:30]cdkinfo ::1-1
+[2017-06-27 11:55:58]cdkinfo setSql  1
+[2017-06-27 11:55:58]cdkinfo setSql  2
+[2017-06-27 11:55:58]cdkinfo setSql  3
+[2017-06-27 11:55:58]cdkinfo setSql 10
+[2017-06-27 11:55:58]cdkinfo 33
+[2017-06-27 11:55:58]cdkinfo 34
+[2017-06-27 11:55:58]cdkinfo setSql  1
+[2017-06-27 11:55:58]cdkinfo setSql  2
+[2017-06-27 11:55:58]cdkinfo setSql  3
+[2017-06-27 11:55:58]cdkinfo setSql 4
+[2017-06-27 11:55:58]cdkinfo setSql 5
+[2017-06-27 11:55:58]cdkinfo setSql 6
+[2017-06-27 11:55:58]cdkinfo setSql 7
+[2017-06-27 11:55:58]cdkinfo end 1
+[2017-06-27 11:55:58]cdkinfo end 2
+[2017-06-27 11:55:58]cdkinfo ::1
+[2017-06-27 11:55:58]cdkinfo ::1-1
+[2017-06-27 11:59:09]cdkinfo setSql  1
+[2017-06-27 11:59:09]cdkinfo setSql  2
+[2017-06-27 11:59:09]cdkinfo setSql  3
+[2017-06-27 11:59:09]cdkinfo setSql 10
+[2017-06-27 11:59:09]cdkinfo 33
+[2017-06-27 11:59:09]cdkinfo 34
+[2017-06-27 11:59:09]cdkinfo setSql  1
+[2017-06-27 11:59:09]cdkinfo setSql  2
+[2017-06-27 11:59:09]cdkinfo setSql  3
+[2017-06-27 11:59:09]cdkinfo setSql 4
+[2017-06-27 11:59:09]cdkinfo setSql 5
+[2017-06-27 11:59:09]cdkinfo setSql 6
+[2017-06-27 11:59:09]cdkinfo setSql 7
+[2017-06-27 11:59:09]cdkinfo end 1
+[2017-06-27 11:59:09]cdkinfo end 2
+[2017-06-27 11:59:09]cdkinfo ::1
+[2017-06-27 11:59:09]cdkinfo ::1-1
+[2017-06-27 12:01:54]cdkinfo setSql  1
+[2017-06-27 12:01:54]cdkinfo setSql  2
+[2017-06-27 12:01:54]cdkinfo setSql  3
+[2017-06-27 12:01:54]cdkinfo setSql 4
+[2017-06-27 12:01:54]cdkinfo setSql 5
+[2017-06-27 12:01:54]cdkinfo setSql 6
+[2017-06-27 12:01:54]cdkinfo setSql 7
+[2017-06-27 12:01:59]cdkinfo setSql  1
+[2017-06-27 12:01:59]cdkinfo setSql  2
+[2017-06-27 12:01:59]cdkinfo setSql  3
+[2017-06-27 12:01:59]cdkinfo setSql 4
+[2017-06-27 12:01:59]cdkinfo setSql 5
+[2017-06-27 12:01:59]cdkinfo setSql 6
+[2017-06-27 12:01:59]cdkinfo setSql 7
+[2017-06-27 12:02:45]cdkinfo setSql  1
+[2017-06-27 12:02:45]cdkinfo setSql  2
+[2017-06-27 12:02:45]cdkinfo setSql  3
+[2017-06-27 12:02:45]cdkinfo setSql 4
+[2017-06-27 12:02:45]cdkinfo setSql 5
+[2017-06-27 12:02:45]cdkinfo setSql 6
+[2017-06-27 12:02:45]cdkinfo setSql 7
+[2017-06-27 12:09:08]cdkinfo setSql  1
+[2017-06-27 12:09:08]cdkinfo setSql  2
+[2017-06-27 12:09:08]cdkinfo setSql  3
+[2017-06-27 12:09:08]cdkinfo setSql 4
+[2017-06-27 12:09:08]cdkinfo setSql 5
+[2017-06-27 12:09:08]cdkinfo setSql 6
+[2017-06-27 12:09:08]cdkinfo setSql 7
+[2017-06-27 12:09:11]cdkinfo setSql  1
+[2017-06-27 12:09:11]cdkinfo setSql  2
+[2017-06-27 12:09:11]cdkinfo setSql  3
+[2017-06-27 12:09:11]cdkinfo setSql 4
+[2017-06-27 12:09:11]cdkinfo setSql 5
+[2017-06-27 12:09:11]cdkinfo setSql 6
+[2017-06-27 12:09:11]cdkinfo setSql 7
+[2017-06-27 12:10:27]cdkinfo setSql  1
+[2017-06-27 12:10:27]cdkinfo setSql  2
+[2017-06-27 12:10:27]cdkinfo setSql  3
+[2017-06-27 12:10:27]cdkinfo setSql 4
+[2017-06-27 12:10:27]cdkinfo setSql 5
+[2017-06-27 12:10:27]cdkinfo setSql 6
+[2017-06-27 12:10:27]cdkinfo setSql 7
+[2017-06-27 12:12:54]cdkinfo setSql  1
+[2017-06-27 12:12:54]cdkinfo setSql  2
+[2017-06-27 12:12:54]cdkinfo setSql  3
+[2017-06-27 12:12:54]cdkinfo setSql 4
+[2017-06-27 12:12:54]cdkinfo setSql 5
+[2017-06-27 12:12:54]cdkinfo setSql 6
+[2017-06-27 12:12:54]cdkinfo setSql 7
+[2017-06-27 12:13:13]cdkinfo setSql  1
+[2017-06-27 12:13:13]cdkinfo setSql  2
+[2017-06-27 12:13:13]cdkinfo setSql  3
+[2017-06-27 12:13:13]cdkinfo setSql 10
+[2017-06-27 12:13:13]cdkinfo 33
+[2017-06-27 12:13:13]cdkinfo 34
+[2017-06-27 12:13:13]cdkinfo setSql  1
+[2017-06-27 12:13:13]cdkinfo setSql  2
+[2017-06-27 12:13:13]cdkinfo setSql  3
+[2017-06-27 12:13:13]cdkinfo setSql 4
+[2017-06-27 12:13:13]cdkinfo setSql 5
+[2017-06-27 12:13:13]cdkinfo setSql 6
+[2017-06-27 12:13:13]cdkinfo setSql 7
+[2017-06-27 12:13:13]cdkinfo end 1
+[2017-06-27 12:13:13]cdkinfo end 2
+[2017-06-27 12:13:13]cdkinfo ::1
+[2017-06-27 12:13:13]cdkinfo ::1-1
+[2017-06-27 12:13:25]cdkinfo setSql  1
+[2017-06-27 12:13:25]cdkinfo setSql  2
+[2017-06-27 12:13:25]cdkinfo setSql  3
+[2017-06-27 12:13:25]cdkinfo setSql 4
+[2017-06-27 12:13:25]cdkinfo setSql 5
+[2017-06-27 12:13:25]cdkinfo setSql 6
+[2017-06-27 12:13:25]cdkinfo setSql 7
+[2017-06-27 12:13:34]cdkinfo setSql  1
+[2017-06-27 12:13:34]cdkinfo setSql  2
+[2017-06-27 12:13:34]cdkinfo setSql  3
+[2017-06-27 12:13:34]cdkinfo setSql 4
+[2017-06-27 12:13:34]cdkinfo setSql 5
+[2017-06-27 12:13:34]cdkinfo setSql 6
+[2017-06-27 12:13:34]cdkinfo setSql 7
