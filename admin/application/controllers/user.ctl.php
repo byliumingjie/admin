@@ -17,13 +17,7 @@ class User_Controller extends Module_Lib {
      * 登录
      */
     public function login() { 
-    	// __log_message("is get login",'session');
-        /*if ($this->checkLogin()) {        	
-            $go = urldecode($_GET['go']);           
-            $go = empty($go) ? '/' : $go;
-            header("Location:" . $go);
-            exit();
-        }*/
+
         load_view('login');
     }
     

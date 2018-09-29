@@ -21,7 +21,7 @@ class Db_Config {
 	
         if (SETDB === 1) {
 
-            $host = '127.0.0.1';
+            $host = '192.168.0.140';
             $user = "liumj";
             $pass = "liumj!@#2018";
 			
@@ -45,7 +45,7 @@ class Db_Config {
         }
         if (SETDB === 0 || SETDB === 2) {
 
-            $host = '127.0.0.1';
+            $host = '192.168.0.140';
             $user = "liumj";
             $pass = "liumj!@#2018";
         		
