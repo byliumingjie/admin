@@ -4,7 +4,7 @@ echo Page_Lib::head($insert_html,true,1);#加载的html样式
 $page = Config::get("common");#
 ?>
 <?php
-$host = $_SERVER['HTTP_HOST'];
+
 ?>
 <div id="content-header">
 	<h1> Minos  Admin</h1>
@@ -24,7 +24,7 @@ $host = $_SERVER['HTTP_HOST'];
                      <h5>登陆</h5>
 			</div>			 
 		<div class="widget-content">
-                    <form class="form-horizontal" id="loginForm" action="<?php echo $host?>/user/userLogin" method="Post" onsubmit="return false">
+                    <form class="form-horizontal" id="loginForm" action="<?php echo $page['host']?>/user/userLogin" method="Post" onsubmit="return false">
                         <div class="control-group" >
                             <div class="controls-row">
                                 <div class="span2"></div>
