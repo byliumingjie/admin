@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root platform_id="1" server_id="2" maxnum="3000">
-  		<system heartbeat="300" closeclientpacketsize="50"/>
-  		<res configrespath="res"/><center tick="50" addr="127.0.0.1" count="4"/><redeem tick="50" addr="121.0.0.1" count="4"/><arena tick="50" addr="127.0.0.1" count="0"/><server><logic tick="50" addr="10.0.0.1" count="0"/><login_in tick="50" addr="127.0.0.1" count="0"/></server><db db_addr="" db_user="" db_password="" db_name="globaldb" db_charset="gbk"/><censusdb db_addr="172.168.100.83" db_user="minosphp" db_password="123456" db_name="minos_censusdb" db_charset="gbk"/><gameaccountdb db_addr="172.168.100.140" db_user="root" db_password="mns!@#2017" db_name="admin" db_charset="gbk"/><globaldb db_addr="172.168.100.140" db_user="root" db_password="mns!@#2017" db_name="globaldb" db_charset="gbk"/><manager addr="+" port="9875" signkey="123"/></root>

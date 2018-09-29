@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root platform_id="4" server_id="5" maxnum="3000">
-  		<system heartbeat="300" closeclientpacketsize="50"/>
-  		<center tick="30"><node addr="1" port="30001" unitid="1"/></center><redeem tick="50"><node addr="1" port="31001"/></redeem><arena tick="40"><node addr="1" port="32001"/></arena><server><logic tick="30"><node addr="1" port="33001" unitid="2"/></logic><login_in tick="30"><node addr="1" port="34001" outport="40001" unitid="3"/></login_in></server><res configrespath="C:\Server&#13;es\"/></root>

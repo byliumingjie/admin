@@ -1,6 +1,7 @@
 <?php
-//$IP =  gethostbyname($_ENV['COMPUTERNAME']); 
-define('IP', '192.168.0.140');
+$IP =  gethostbyname($_ENV['COMPUTERNAME']);
+
+define('IP', $IP);
 define('PORT', ':8057');
 
 $_STATIC= "http://".gethostbyname($_ENV['COMPUTERNAME']).":8057/static";
