@@ -64,7 +64,7 @@ date_default_timezone_set("Asia/Shanghai");
 //}
 
 
- /* DB环境模块 */
+/* DB环境模块 */
 load_config("pub:setdb");
 
 
@@ -77,8 +77,8 @@ load_library('sys:framework');
 $framework = new FrameWork();
 $framework->run_driver();
 /* 用于后台脚本, 不载入 dispatcher 模块 */
-if (APPLICATION_CLI ===false) {
-    $framework->run();   
+if (APPLICATION_CLI === false) {
+    $framework->run();
 }
 /*
  * 主框架的一些基本函数
@@ -99,27 +99,31 @@ if (APPLICATION_CLI ===false) {
  * @return mixed
  */
 
-function __load_core($file, $sub_folder, $return_file_fullpath = false) {
-    
+function __load_core($file, $sub_folder, $return_file_fullpath = false)
+{
+
     if (false !== ($pos = strpos($file, ':'))) {
         $path = substr($file, 0, $pos);
         $file = substr($file, $pos + 1);
         switch ($path) {
-            case 'sys': $path = FRAMEWORK_ROOT . 'system' . DIRECTORY_SEPARATOR;             
+            case 'sys':
+                $path = FRAMEWORK_ROOT . 'system' . DIRECTORY_SEPARATOR;
                 break;
-            case 'pub': $path = FRAMEWORK_ROOT . 'public' . DIRECTORY_SEPARATOR;
+            case 'pub':
+                $path = FRAMEWORK_ROOT . 'public' . DIRECTORY_SEPARATOR;
                 break;
             //case 'Memcache': $path = FRAMEWORK_ROOT . 'system' . DIRECTORY_SEPARATOR;
-            default: $path = APPLICATION_FOLDER;
+            default:
+                $path = APPLICATION_FOLDER;
                 break;
         }
-    }  else {
+    } else {
         $path = APPLICATION_FOLDER;
     }
-    
+
     $filepath = $path . $sub_folder . DIRECTORY_SEPARATOR . $file . '.php';
-	
-	//__log_message($filepath,"load-file");
+
+    //__log_message($filepath,"load-file");
 
     if (strpos('//', $filepath)) {
         $filepath = str_replace('//', '/', $filepath);
@@ -135,7 +139,7 @@ function __load_core($file, $sub_folder, $return_file_fullpath = false) {
         return $filepath;
     }
     require_once $filepath;
-	//__log_message($filepath,"load-file");
+    //__log_message($filepath,"load-file");
     return true;
 }
 
@@ -149,9 +153,9 @@ function __load_core($file, $sub_folder, $return_file_fullpath = false) {
  *
  */
 
-function load_view($filename, $passed_data_array = null, $output = true, $layout = 'default') {
-    if ($passed_data_array)
-    {
+function load_view($filename, $passed_data_array = null, $output = true, $layout = 'default')
+{
+    if ($passed_data_array) {
         /* 数组, 对象, 直接 export 出来, export 后为local variable */
         if (is_array($passed_data_array)) {
 
@@ -194,7 +198,8 @@ function load_view($filename, $passed_data_array = null, $output = true, $layout
  *
  */
 
-function load_library($filename, $which = true) {
+function load_library($filename, $which = true)
+{
     return __load_core(strtolower($filename) . '.lib', 'libraries');
 }
 
@@ -206,10 +211,11 @@ function load_library($filename, $which = true) {
  * @return true / false
  *
  */
-function load_pub_library($filename,$which=true,$return_url = false){
-	$filename = strtolower($filename);
-	$filename = $which?($filename.'.plib'):($filename);
-    return __load_core('pub:'.$filename, 'libraries',$return_url);
+function load_pub_library($filename, $which = true, $return_url = false)
+{
+    $filename = strtolower($filename);
+    $filename = $which ? ($filename . '.plib') : ($filename);
+    return __load_core('pub:' . $filename, 'libraries', $return_url);
 }
 
 /*
@@ -221,10 +227,11 @@ function load_pub_library($filename,$which=true,$return_url = false){
  *
  */
 
-function load_controller($filename,$subdirectory=false) {
+function load_controller($filename, $subdirectory = false)
+{
     $dir = "controllers";
-    !empty($subdirectory) && $dir.='/'.$subdirectory;
-    
+    !empty($subdirectory) && $dir .= '/' . $subdirectory;
+
     return __load_core(strtolower($filename) . '.ctl', $dir);
 }
 
@@ -236,32 +243,35 @@ function load_controller($filename,$subdirectory=false) {
  *
  */
 
-function load_config($filename, $return_url = false,$dir=false) {
+function load_config($filename, $return_url = false, $dir = false)
+{
     $dir || $dir = 'config';
     return __load_core(strtolower($filename) . '.cfg', $dir, $return_url);
 }
 
 /**
- * 	配置加载config文件，并获取其中的变量
+ *    配置加载config文件，并获取其中的变量
  *  此函数通常用于在函数内加载配置文件，并能立即在函数中使用
  *  配置文件格式如下：
  *  return array(
- * 	'1'=>'xxx',
- * 	'2'=>'bbbb'
- * 	)
+ *    '1'=>'xxx',
+ *    '2'=>'bbbb'
+ *    )
  */
-function load_config_return($filename) {
+function load_config_return($filename)
+{
     return include(__load_core(strtolower($filename) . '.cfg', 'config', true));
 }
 
 /**
  * 助手加载函数
  *
- * @param string $filename  文件名
+ * @param string $filename 文件名
  * @return true / false
  *
  */
-function load_helper($filename) {
+function load_helper($filename)
+{
     return __load_core(strtolower($filename) . '.hlp', 'helper');
 }
 
@@ -270,11 +280,12 @@ function load_helper($filename) {
  * load_model('user') 即加载application/models/user.mod.php
  *
  *
- * @param string $filename  文件名
+ * @param string $filename 文件名
  * @return true / false
  *
  */
-function load_model($filename) {
+function load_model($filename)
+{
 
     if (__load_core(strtolower($filename) . '.mod', 'models')) {
 
@@ -289,7 +300,7 @@ function load_model($filename) {
             trigger_error($class_name . '  undefined class: ' . $class_name, E_USER_ERROR);
             return false;
         }
-		
+
         return true;
     }
 
@@ -300,7 +311,8 @@ function load_model($filename) {
  * 加载业务逻辑层
  * load_service('user') 即加载application/services/user.ser.php
  */
-function load_service($filename) {
+function load_service($filename)
+{
 
     if (__load_core(strtolower($filename) . '.ser', 'services')) {
 
@@ -321,12 +333,13 @@ function load_service($filename) {
 
     return false;
 }
- 
+
 /**
  * 加载由rsync同步的文件，一般用于后台
  *
  */
-function load_syncfile($filename) {
+function load_syncfile($filename)
+{
     return __load_core($filename, 'syncfile');
 }
 
@@ -337,14 +350,14 @@ function load_syncfile($filename) {
  * @return true/false
  *
  */
-function load_extend($filename,$version =FALSE) {
+function load_extend($filename, $version = FALSE)
+{
     //return __load_core($filename . '.ext', 'extend');
-    if($version === false)
-    {
-        return __load_core($filename , 'extends');
+    if ($version === false) {
+        return __load_core($filename, 'extends');
     }
-    __log_message("success load".$version,$version);
-    return __load_core($filename , 'extends/'.$version);
+    __log_message("success load" . $version, $version);
+    return __load_core($filename, 'extends/' . $version);
 }
 
 /**
@@ -354,11 +367,13 @@ function load_extend($filename,$version =FALSE) {
  * @return true/false
  *
  */
-function load_event($filename) {
+function load_event($filename)
+{
     return __load_core($filename, 'events');
 }
 
-function load_platform($filename) {
+function load_platform($filename)
+{
     return __load_core($filename . '.pf', 'platform');
 }
 
@@ -366,18 +381,20 @@ function load_platform($filename) {
  * 加载app下面的其他目录文件
  * load_appfile('sdk','appinclude');
  */
-function load_appfile($dir, $filename, $return_url = false) {
+function load_appfile($dir, $filename, $return_url = false)
+{
     return __load_core($filename, $dir, $return_url);
 }
 
-function M($name='') {
-    static $_model  = array();
-    if(strpos($name,':')) {
-        list($class,$name)    =  explode(':',$name);
-    }else{
-        $class      =  $name;
+function M($name = '')
+{
+    static $_model = array();
+    if (strpos($name, ':')) {
+        list($class, $name) = explode(':', $name);
+    } else {
+        $class = $name;
     }
-    
+
     if (!isset($_model[$class]))
         $_model[$class] = new $class();
     return $_model[$class];
@@ -388,7 +405,8 @@ function M($name='') {
  *
  */
 
-function __system_catch_exception($errno, $errstr, $errfile, $errline) {
+function __system_catch_exception($errno, $errstr, $errfile, $errline)
+{
     if (E_NOTICE == $errno)
         return;
 
@@ -404,7 +422,8 @@ function __system_catch_exception($errno, $errstr, $errfile, $errline) {
  * $dir 目录默认为空 'payment/pay' 即payment下的pay_201206.txt
  *
  */
-function __log_message($message, $dir = '') {
+function __log_message($message, $dir = '')
+{
     $filename = !empty($dir) ? (LOG_PATH . $dir . '_' . date('Y-m-d') . '.txt') : (LOG_PATH . 'common' . '_' . date('Y-m-d') . '.txt');
     $file = @fopen($filename, 'ab');
     if (is_array($message)) {
@@ -415,105 +434,130 @@ function __log_message($message, $dir = '') {
     @fclose($file);
     return true;
 }
+
 /**
  * 全局日志记录
  * global log record
  * @param type int $code 请求状态协议码
- * @param type array['result'] || string string  $request  请求数据数组  
+ * @param type array['result'] || string string  $request  请求数据数组
  * @param type array['result'] || string string  $response 响应数据数组
- * @param type   $statusCode 响应状态协议码
+ * @param type $statusCode 响应状态协议码
  * @param number $source 渠道来源
  **/
-function  log_message($code,$request,$response,$statusCode=0,$source=3){	
-	$Inrequest = array();
-	$responseOut ='';
-	// 请求数据
-	if (is_array($request))
-	{
-		//$Inrequest['code']=$code;
-		//$Inrequest['operator']=$_SESSION['account'];
-		//$Inrequest['source']=$source;
-		if (!isset($request['result']))
-		{
-			$Inrequest['result']=[$request];
-		}else {
-			$Inrequest+= $request;
-		}
-		$requestOut = json_encode($Inrequest);
-		
-	}elseif (is_string($request))
-	{
-		$inPonseOut['result']=$response;
-		$response = json_encode($inPonseOut);
-	}
-	
-	
-	if (is_string($response)){
-		$inPonseOut['status']=$statusCode;
-		$inPonseOut['result']=$response;
-		$responseOut = json_encode($inPonseOut);
-	}
-	if (is_array($response))
-	{
-		$inPonseOut['status']=$statusCode;
-		if (!isset($response['result']))
-		{
-			$inPonseOut['result']=$response;
-		}else{
-			$inPonseOut += $response;
-		}
-		$responseOut = json_encode($inPonseOut);
-	}
-	//__log_message('responseOut'.$responseOut,'apilog');
-	
-	$logdata = array(
-			"source"=>$source,
-			"protocolCode"=>$code,
-			"sname"=>0,
-			"playerId"=>0,
-			"account"=>$_SESSION['account'],
-			"RequestData"=>$requestOut,
-			"ResponseData"=>$responseOut,
-			"RequestIp"=>getIP(),
-			"ExecutionState"=>$statusCode,
-			"create_time"=>time()
-	);
-	//__log_message("logdata ::".json_encode($logdata),'apilog');
-	if (!Apilog_Model::setlog($logdata))
-	{
-		__log_message("ERROR:".$code."后台日志记录失败!");
-		return false;
-	}
-	return true;
+function log_message($code, $request, $response, $statusCode = 0, $source = 3)
+{
+    $Inrequest = array();
+    $responseOut = '';
+    // 请求数据
+    if (is_array($request)) {
+        //$Inrequest['code']=$code;
+        //$Inrequest['operator']=$_SESSION['account'];
+        //$Inrequest['source']=$source;
+        if (!isset($request['result'])) {
+            $Inrequest['result'] = [$request];
+        } else {
+            $Inrequest += $request;
+        }
+        $requestOut = json_encode($Inrequest);
+
+    } elseif (is_string($request)) {
+        $inPonseOut['result'] = $response;
+        $response = json_encode($inPonseOut);
+    }
+
+
+    if (is_string($response)) {
+        $inPonseOut['status'] = $statusCode;
+        $inPonseOut['result'] = $response;
+        $responseOut = json_encode($inPonseOut);
+    }
+    if (is_array($response)) {
+        $inPonseOut['status'] = $statusCode;
+        if (!isset($response['result'])) {
+            $inPonseOut['result'] = $response;
+        } else {
+            $inPonseOut += $response;
+        }
+        $responseOut = json_encode($inPonseOut);
+    }
+    //__log_message('responseOut'.$responseOut,'apilog');
+
+    $logdata = array(
+        "source" => $source,
+        "protocolCode" => $code,
+        "sname" => 0,
+        "playerId" => 0,
+        "account" => $_SESSION['account'],
+        "RequestData" => $requestOut,
+        "ResponseData" => $responseOut,
+        "RequestIp" => getIP(),
+        "ExecutionState" => $statusCode,
+        "create_time" => time()
+    );
+    //__log_message("logdata ::".json_encode($logdata),'apilog');
+    if (!Apilog_Model::setlog($logdata)) {
+        __log_message("ERROR:" . $code . "后台日志记录失败!");
+        return false;
+    }
+    return true;
 }
+
 //异常终止
-function __dispatch_exit($msg) {
+function __dispatch_exit($msg)
+{
     echo $msg;
-     trigger_error($msg, E_USER_ERROR);
+    trigger_error($msg, E_USER_ERROR);
     exit;
 }
+
 //获取ip
-function getIP ()
+function getIP()
 {
-	global $_SERVER;
-	if (getenv('HTTP_CLIENT_IP')) {
-		$ip = getenv('HTTP_CLIENT_IP');
-	} else if (getenv('HTTP_X_FORWARDED_FOR')) {
-		$ip = getenv('HTTP_X_FORWARDED_FOR');
-	} else if (getenv('REMOTE_ADDR')) {
-		$ip = getenv('REMOTE_ADDR');
-	} else {
-		$ip = $_SERVER['REMOTE_ADDR'];
-	}
-	return $ip;
+    global $_SERVER;
+    if (getenv('HTTP_CLIENT_IP')) {
+        $ip = getenv('HTTP_CLIENT_IP');
+    } else if (getenv('HTTP_X_FORWARDED_FOR')) {
+        $ip = getenv('HTTP_X_FORWARDED_FOR');
+    } else if (getenv('REMOTE_ADDR')) {
+        $ip = getenv('REMOTE_ADDR');
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip;
 }
-function __error404() {
+
+function __error404()
+{
     if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/404.php')) {
-       header("location:{$_SERVER['DOCUMENT_ROOT']}/404.php");
+        header("location:{$_SERVER['DOCUMENT_ROOT']}/404.php");
     } else {
         header('HTTP/1.0 404 Not Found');
     }
     exit;
+}
+
+function get_server_ip()
+{
+    if (!empty($_SERVER['SERVER_ADDR']))
+        return $_SERVER['SERVER_ADDR'];
+    $result = shell_exec("/sbin/ifconfig");
+    if (preg_match_all("/addr:(\d+\.\d+\.\d+\.\d+)/", $result, $match) !== 0) {
+        foreach ($match[0] as $k => $v) {
+            if ($match[1][$k] != "127.0.0.1")
+                return $match[1][$k];
+        }
+    }
+    return false;
+}
+
+function ip()
+{
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+        $ip = getHostByName(php_uname('n'));
+        return $ip;
+    } else {
+        return get_server_ip();
+    }
 }
 
 ?>
