@@ -194,6 +194,7 @@ class User_Controller extends Module_Lib {
         setcookie('accountCookie','',time()-1,'/');
         setcookie('filepath','',  time()-1 ,'/');
         Header("Location:/user/login");
+
         exit();
     }
     
