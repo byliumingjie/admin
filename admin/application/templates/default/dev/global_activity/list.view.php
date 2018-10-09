@@ -8,7 +8,7 @@ echo Page_Lib::head($insert_html);
 ?> 
 <!-- 站内导航 -->
 <div id="content-header">
-	<h1>全局活动列表</h1>
+	<h1>配置信息</h1>
 	<div class="btn-group"> 
 	<a class="btn btn-success btn-large" title="批量发布"  
     	data-backdrop="static" id="addName">

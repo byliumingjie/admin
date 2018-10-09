@@ -124,10 +124,11 @@ function __load_core($file, $sub_folder, $return_file_fullpath = false)
     $filepath = $path . $sub_folder . DIRECTORY_SEPARATOR . $file . '.php';
 
     //__log_message($filepath,"load-file");
-
+    // 如果路径出现// 转换为单个的
     if (strpos('//', $filepath)) {
         $filepath = str_replace('//', '/', $filepath);
     }
+
     if (!file_exists($filepath)) {
         if (!$return_file_fullpath) {
             trigger_error('file not found: ' . $filepath, E_USER_ERROR);
@@ -201,6 +202,19 @@ function load_view($filename, $passed_data_array = null, $output = true, $layout
 function load_library($filename, $which = true)
 {
     return __load_core(strtolower($filename) . '.lib', 'libraries');
+}
+
+function isPrimary($object)
+{
+    return is_null($object) || is_bool($object) || is_string($object) || is_numeric($object);
+}
+
+function isBlank($object)
+{
+    if (is_null($object) || '' === $object || (is_array($object) && count($object) < 1) || !isset($object)) {
+        return true;
+    }
+    return empty($object);
 }
 
 /*

@@ -252,11 +252,11 @@ class Mysql {
             return false;
         }
         $sql = " INSERT INTO {$table} ($fields) VALUES  ";
-        
+        //log_message::info(json_encode($data));
         foreach($data as $v){
             $sql.="(".implode(',', $v)."),";
         }
-         
+        //log_message::info($sql);
         return $this->_query(rtrim($sql,',').$addItion);
         
     }

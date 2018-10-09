@@ -1,13 +1,13 @@
 <?php
-$insert_html .= Page_Lib::loadJs('global-config', '', 'dev');
-$insert_html .= Page_Lib::loadJs('global-config-load-file', '', 'dev');
+$insert_html .= Page_Lib::loadJs('channel-config', '', 'dev');
+$insert_html .= Page_Lib::loadJs('channel-config-load-file', '', 'dev');
 $insert_html .= Page_Lib::loadJs('multselect');
 $insert_html .= Page_Lib::loadJs('ajaxupload');
 echo Page_Lib::head($insert_html, '', null, true);
 ?>
 <!-- title set tool begin-->
 <div id="content-header">
-    <h1>充值配置</h1>
+    <h1>渠道配置</h1>
     <div class="btn-group">
         <a class="btn btn-success btn-large" title="批量发布"
            data-backdrop="static" id="addName">
@@ -40,11 +40,8 @@ echo Page_Lib::head($insert_html, '', null, true);
             <thead>
             <tr>
                 <th>Id</th>
-                <th>游戏</th>
                 <th>渠道</th>
-                <th>活动状态</th>
-                <th>活动类型</th>
-                <th>秘钥</th>
+                <th>token</th>
                 <th>创建时间</th>
                 <th>操作</th>
             </tr>
@@ -53,11 +50,9 @@ echo Page_Lib::head($insert_html, '', null, true);
             <?php foreach ($config_data as $inkey => $invar): ?>
                 <tr>
                     <td style="text-align: center;" data-name="id"><?php echo $invar['id']; ?></td>
-                    <td style="text-align: center;" data-name='pc'><?php echo $invar['pc']; ?></td>
-                    <td style="text-align: center;" data-name="channel_id"><?php echo $invar['channel_id']; ?></td>
-                    <td style="text-align: center;" data-name="act_status"><?php echo $invar['act_status']; ?></td>
-                    <td style="text-align: center;" data-name="act_type"><?php echo $invar['act_type']; ?></td>
-                    <td style="text-align: center;" data-name="sign"><?php echo $invar['sign']; ?></td>
+                    <td style="text-align: center;" data-name='channel_name'><?php echo $invar['channel_name']; ?></td>
+                    <td style="text-align: center;"
+                        data-name="channel_token"><?php echo $invar['channel_token']; ?></td>
                     <td style="text-align: center;" data-name="create_at"><?php echo $invar['create_at']; ?></td>
                     <td style=" text-align: center;">
                         <a href="#" class="tip-top editpayConcif" data-original-title="编辑"
@@ -66,9 +61,6 @@ echo Page_Lib::head($insert_html, '', null, true);
                         <a href="#" class="tip-top delpayConfig" data-original-title="删除"
                            data-value="<?php echo $invar['id'] ?>">
                             <i class="icon-remove"></i></a>
-                        <a href="#" class="tip-top loadConfig" data-original-title="上传"
-                           data-value="<?php echo $invar['id'] ?>">
-                            <i class="icon-upload"></i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -120,16 +112,16 @@ echo Page_Lib::head($insert_html, '', null, true);
             <div class="modal-body" style="max-height:40%">
                 <form class="form-horizontal" action="#" method="POST" id="editpayconfigForm">
                     <input type="hidden" name='id'/>
-                    <div class="control-group">
+                    <!--<div class="control-group">
                         <label class="control-label">游戏昵称：*</label>
                         <div class="controls"><input type="text"
                                                      style="width:62%" class="input-mini" name="pc"/>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="control-group">
                         <label class="control-label">渠道：*</label>
                         <div class="controls"><input type="text"
-                                                     style="width:62%" class="input-mini" name="channel_id"/>
+                                                     style="width:62%" class="input-mini" name="channel_name"/>
                         </div>
                     </div>
 
@@ -162,15 +154,15 @@ echo Page_Lib::head($insert_html, '', null, true);
                     <div class="control-group">
                         <label class="control-label">游戏昵称：*</label>
                         <div class="controls"><input type="text"
-                                                     style="width:62%" class="input-mini" name="pc_name"/>
+                                                     style="width:62%" class="input-mini" name="channel_name"/>
                         </div>
                     </div>
-                    <div class="control-group">
+                    <!--<div class="control-group">
                         <label class="control-label">渠道：*</label>
                         <div class="controls"><input type="text"
                                                      style="width:62%" class="input-mini" name="channel"/>
                         </div>
-                    </div>
+                    </div>-->
                     <!--<div class="control-group">
                         <label class="control-label">活动状态：*</label>
                         <div class="controls"><input type="text" style="width:62%" class="input-mini"

@@ -8,6 +8,7 @@
  */
 class log_message
 {
+
     public static function info()
     {
         $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
@@ -27,14 +28,15 @@ class log_message
         foreach (func_get_args() as $item) {
             $message .= self::toString($item) . ' ';
         }
+        $classname_file = basename($file, '.php') . '.txt';
 
-        $file_name = LOG_SERVER_URL . date('YMD', time());
+        $file_name = LOG_SERVER_URL . date('Ymd', time()) .'_'. $classname_file;
 
         if (!$file_name) {
             return -1;
         }
         if (self::isCli()) {
-             self::echoLine('[INFO]' . date('Y-m-d H:i:s') . ' ' . $message);
+            self::echoLine('[INFO]' . date('Y-m-d H:i:s') . ' ' . $message);
         } else {
             if (error_log($message . "\n", 3, $file_name) == FALSE) {
                 return -1;
