@@ -1,7 +1,0 @@
-2018-09-28 16:41:57 1 
-2018-09-28 16:41:57 2{"id":"1","platformId":"1","platformname":"\u5185\u7f51\u6d4b\u8bd5","desc":"172.168.100.183","type":"4","mysqlhost":"172.168.100.83","mysqlport":"3306","db":"php_manager","mysqluse":"minosphp","mysqlpasswprd":"123456","platformhost":"172.168.100.183","platformport":"61343","platformdb":"globaldb","platformuser":"10","platformpwd":"10","gameNodePort":"58339:58354:58369:58384:58399:58414:58429:58444","gameNodeHost":"172.168.100.183","gamesdbHost":"10","gameInternalHost":"10","serverStatus":"1","cdkServerHost":"8","cdkServerWorker":"8","centerServerWorker":"10","arenaServerWorker":"10","mapServerWorker":"10","gatewayServerWorker":"10"} 
-2018-09-28 16:41:57 3{"gameNodePort":58339,"gamedbHost":"10","gamedbName":"globaldb","gamedbUser":"10","gamedbPassword":"10","webSocketPort":"61343","serverId":4,"platId":1,"gameInternalHost":"10","centerServerWorker":10,"arenaServerWorker":10,"mapServerWorker":10,"gatewayServerWorker":10,"cdkServerHost":"172.168.100.200","cdkServerWorker":8,"statdbHost":"rm-2ze454qswm5ykqtyjo.mysql.rds.aliyuncs.com","statdbName":"apple_census","statdbUser":"minosdbsa","statdbPassword":"minos@0810_+"} 
-2018-09-28 16:41:57 4 SET_XML  
-2018-09-28 16:41:57 5 SET_XML  
-2018-09-28 16:41:57 6 SET_XML  
-2018-09-28 16:41:57 7 SET_XML  
