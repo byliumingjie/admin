@@ -21,9 +21,9 @@ define('SUCCESS', 0);
 define('FAILURE', -1);
 
 #file upload url
-
 define('RES_URL', 'http://192.168.181.133:9095');
 define('RES_PATH', dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT']))) . '/res/config/');
+define('RES_CONFIG_URL', '192.168.181.133');// config file url
 # config file path
 //http://192.168.181.133/chuanqi_mofang12.json
 $patch = RES_PATH;

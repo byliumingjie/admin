@@ -14,7 +14,6 @@ class GlobalConfig_Controller extends Module_Lib
         $conn = Platfrom_Service::getServer(true, 'gank_globaldb');
         $this->mode = new  GlobalConfig_Model($conn);
         $this->channel_mode = new Channel_Model($conn);
-
     }
 
     public function index($loadget = false)
@@ -188,14 +187,19 @@ class GlobalConfig_Controller extends Module_Lib
         $channel_name = $pc . '_' . pinyin::getPinyin($channel_ary['channel_name']) . '.json';
         // 写入文件 方案1
         $this->mkdirFile(RES_PATH, $channel_name, $config_ary);
-
         $pc = $config_ary['pc'];
         //方案2
         if (file_exists(RES_PATH)) {
             $res = $this->request_upload_curls($channel_name);
             $status = (!isBlank($res)) ? json_encode($res)['status'] : null;
+
             if (isset($status) && $status == SUCCESS) {
-                $this->mode->editConfig($id, ['act_type' => 1]);
+                $act_data = array(
+                    'act_type' => 1,
+                    'config_url' => RES_CONFIG_URL . DIR_SEPARATOR . $channel_name
+                );
+                $this->mode->editConfig($id, $act_data);
+
                 $this->outputJson(SUCCESS, '上传成功！');
             } else {
                 log_message::info(json_encode($res));

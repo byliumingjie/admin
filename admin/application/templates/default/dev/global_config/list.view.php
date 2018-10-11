@@ -58,6 +58,7 @@ echo Page_Lib::head($insert_html, '', null, true);
                 <th>server min</th>
                 <th>server max</th>
                 <th>活动配置</th>
+                <th>配置地址</th>
                 <th>创建时间</th>
                 <th>操作</th>
             </tr>
@@ -82,6 +83,7 @@ echo Page_Lib::head($insert_html, '', null, true);
                     <td style="text-align: center;">
                         <button class="btn btn-link serverInfo">请求数据详情</button>
                     </td>
+                    <td style="text-align: center;" data-name="config_url"><?php echo $invar['config_url']; ?></td>
                     <td style="text-align: center;" data-name="create_at"><?php echo $invar['create_at']; ?></td>
                     <td style="text-align: center; display: none"
                         data-name="act_rule"><?php echo json_encode(json_decode($invar['act_rule'], true), JSON_PRETTY_PRINT); ?></td>
