@@ -6,165 +6,164 @@
  * and open the template in the editor.
  */
 @session_start();
-class DevToolbox_Lib  extends Page_Lib{
 
-	/**
-	 * @param $idName key 
-	 * @param $title  title[0] is initial title[1] option is true
-	 * @param $config item config list
-	 * @param desc option list 
-	 * **/
-	public static  function elementMailOption($idName,$title=array(),
-	$config=array(),$desc=null,$ItemNumber=NULL)
-	{
-		if (!empty($ItemNumber))
-		{
-			for ($i=1;$i<=$ItemNumber;$i++)
-			{
-			$itemOption = '道具ID'.$i.'&nbsp<input type="checkbox" value="propid'.$i.'" name="checkbox[]">
+class DevToolbox_Lib extends Page_Lib
+{
+
+    /**
+     * @param $idName key
+     * @param $title  title[0] is initial title[1] option is true
+     * @param $config item config list
+     * @param desc option list
+     * **/
+    public static function elementMailOption($idName, $title = array(),
+                                             $config = array(), $desc = null, $ItemNumber = NULL)
+    {
+        if (!empty($ItemNumber)) {
+            for ($i = 1; $i <= $ItemNumber; $i++) {
+                $itemOption = '道具ID' . $i . '&nbsp<input type="checkbox" value="propid' . $i . '" name="checkbox[]">
 			<input type="text" class="form-control"
-			name="propid'.$i.'" onblur="checkProp(this.value,3)">';
-			//
-			if ( count($config['itemConfig'])>0 ){
-				
-				$itemOption = '道具'.$i.':&nbsp<input type="checkbox" value="propid'.$i.'" name="checkbox[]">&nbsp';
-				
-				/* if ($i==1){
-					$itemOption = '<select id="propid'.$i.'" name="propid'.$i.'"
-				class="selectpicker" data-live-search-placeholder="Search" value="20003" data-actions-box="true">';
-				}
-				else{ */
-				$itemOption.= '<select id="propid'.$i.'" name="propid'.$i.'"
+			name="propid' . $i . '" onblur="checkProp(this.value,3)">';
+                //
+                if (count($config['itemConfig']) > 0) {
+
+                    $itemOption = '道具' . $i . ':&nbsp<input type="checkbox" value="propid' . $i . '" name="checkbox[]">&nbsp';
+
+                    /* if ($i==1){
+                        $itemOption = '<select id="propid'.$i.'" name="propid'.$i.'"
+                    class="selectpicker" data-live-search-placeholder="Search" value="20003" data-actions-box="true">';
+                    }
+                    else{ */
+                    $itemOption .= '<select id="propid' . $i . '" name="propid' . $i . '"
 				class="selectpicker" data-live-search-placeholder="Search" data-actions-box="true">';
-				//}
-				$itemOption.="<option value=0>--{$desc}列表--</option>";
-				foreach ($config['itemConfig'] as $Invar)
-				{
-					$itemOption.="<option value=".$Invar['id'].">".$Invar['name']."</option>";
-				}
-				$itemOption.='</select>';
-			}
-		  
-			  $ItemInfoHtml .= '<tr>
+                    //}
+                    $itemOption .= "<option value=0>--{$desc}列表--</option>";
+                    foreach ($config['itemConfig'] as $Invar) {
+                        $itemOption .= "<option value=" . $Invar['id'] . ">" . $Invar['name'] . "</option>";
+                    }
+                    $itemOption .= '</select>';
+                }
+
+                $ItemInfoHtml .= '<tr>
 				<td>
 					<div class="control-group">
 						<label class="checkbox-inline">
 						<div class="controls">
-							'.$itemOption.'
+							' . $itemOption . '
 						</div>
 						</label>
 					</div>
 				</td>
 				<td>
 					<div class="control-group">
-						<label class="control-label">道具数量'.$i.'</label>
+						<label class="control-label">道具数量' . $i . '</label>
 						<div class="controls">
 							<input type="text" class="form-control" 
-							maxlength="10" placeholder="不可输入小数" name="propnum'.$i.'"'.'">
+							maxlength="10" placeholder="不可输入小数" name="propnum' . $i . '"' . '">
 						</div>
 					</div>
 				</td>
 			</tr>';
-			  $itemOptionOut [] =$itemOption;
-		  }
-		  $itemOutArray = 
-		  [
-		  	'ItemInfoHtml'=>$ItemInfoHtml,
-		  	'ItemOption'=>$itemOptionOut		  		
-		  ];
-		  return $itemOutArray;
-		}
-		// 道具配置 itemConfig
-		$itemOption = $title[0].'&nbsp<input type="checkbox" value="'.$idName.'" name="checkbox[]">
+                $itemOptionOut [] = $itemOption;
+            }
+            $itemOutArray =
+                [
+                    'ItemInfoHtml' => $ItemInfoHtml,
+                    'ItemOption' => $itemOptionOut
+                ];
+            return $itemOutArray;
+        }
+        // 道具配置 itemConfig
+        $itemOption = $title[0] . '&nbsp<input type="checkbox" value="' . $idName . '" name="checkbox[]">
 		<input type="text" class="form-control"
-		name="'.$idName.'" onblur="checkProp(this.value,3)">';
-		//
-		if ( count($config['itemConfig'])>0 ){
-			$itemOption = $title[1].':&nbsp<input type="checkbox" value="'.$idName.'" name="checkbox[]">&nbsp';
-			$itemOption.= '<select id="'.$idName.'" name="'.$idName.'"
+		name="' . $idName . '" onblur="checkProp(this.value,3)">';
+        //
+        if (count($config['itemConfig']) > 0) {
+            $itemOption = $title[1] . ':&nbsp<input type="checkbox" value="' . $idName . '" name="checkbox[]">&nbsp';
+            $itemOption .= '<select id="' . $idName . '" name="' . $idName . '"
 			class="selectpicker" data-live-search="true" data-live-search-style="begins">';
-			$itemOption.="<option value=0>--{$desc}列表--</option>";
-			foreach ($config['itemConfig'] as $Invar)
-			{
-			  $itemOption.="<option value=".$Invar['id'].">".$Invar['name']."</option>";
-			}
-			$itemOption.='</select>'; 
-		}
-		return $itemOption;
-		
-	}
-/**
- *  mail 组件
- * 
- * @param unknown $error_code
- * @paramparam unknown $title
- * @param unknown $content
- * @return string**/
-public static  function mailModuleHtml($config=NULL,$Itemtype=false){
- 
-	// 表情包配置
-	$faceOption = '表情ID <input type="checkbox" value="faceid" name="checkbox[]">
+            $itemOption .= "<option value=0>--{$desc}列表--</option>";
+            foreach ($config['itemConfig'] as $Invar) {
+                $itemOption .= "<option value=" . $Invar['id'] . ">" . $Invar['name'] . "</option>";
+            }
+            $itemOption .= '</select>';
+        }
+        return $itemOption;
+
+    }
+
+    /**
+     *  mail 组件
+     *
+     * @param unknown $error_code
+     * @paramparam unknown $title
+     * @param unknown $content
+     * @return string*
+     */
+    public static function mailModuleHtml($config = NULL, $Itemtype = false)
+    {
+
+        // 表情包配置
+        $faceOption = '表情ID <input type="checkbox" value="faceid" name="checkbox[]">
 	<input type="text" class="form-control" placeholder="装备或饰品的ID" 
 	name="faceid" onblur="checkProp(this.value,2)">';
-	
-	if (count($config['faceConfig'])>0)
-	{
-		$faceOption = '表情:<input type="checkbox" value="faceid" name="checkbox[]"> &nbsp';
-		$faceOption .= '<select id="faceid" name="faceid" class="selectpicker" 
+
+        if (count($config['faceConfig']) > 0) {
+            $faceOption = '表情:<input type="checkbox" value="faceid" name="checkbox[]"> &nbsp';
+            $faceOption .= '<select id="faceid" name="faceid" class="selectpicker" 
 		data-live-search="true" data-live-search-style="begins">';
-		$faceOption.="<option value=0>--表情包列表--</option>";
-		foreach ($config['faceConfig'] as $Invar){
-			$faceOption.="<option value=".$Invar['id'].">".$Invar['name']."</option>";			
-		}
-		$faceOption.='</select>';
-	}
-	// 套装配置
-	$suitOption = '套装ID: <input type="checkbox" value="suitId" 
+            $faceOption .= "<option value=0>--表情包列表--</option>";
+            foreach ($config['faceConfig'] as $Invar) {
+                $faceOption .= "<option value=" . $Invar['id'] . ">" . $Invar['name'] . "</option>";
+            }
+            $faceOption .= '</select>';
+        }
+        // 套装配置
+        $suitOption = '套装ID: <input type="checkbox" value="suitId" 
 	name="checkbox[]"><input type="text" class="form-control" 
 	placeholder="套装的ID" name="suitId" onblur="checkProp(this.value,1)">';
-	
-	if ( count($config['suitConfig'])>0 ){
-		
-		$suitOption = '套装:<input type="checkbox" value="suitId" name="checkbox[]">&nbsp';
-		$suitOption .= '<select id="suitId" name="suitId" 
+
+        if (count($config['suitConfig']) > 0) {
+
+            $suitOption = '套装:<input type="checkbox" value="suitId" name="checkbox[]">&nbsp';
+            $suitOption .= '<select id="suitId" name="suitId" 
 		class="selectpicker" data-live-search="true" data-live-search-style="begins">';
-		$suitOption.="<option value=0>--套装列表--</option>";
-		foreach ($config['suitConfig'] as $Invar){
-			$suitOption.="<option value=".$Invar['id'].">".$Invar['name']."</option>";			
-		}
-		$suitOption.='</select>';
-	}
-	// 装备配置
-	$equipOption = '装备ID <input type="checkbox" value="equipid" name="checkbox[]">
+            $suitOption .= "<option value=0>--套装列表--</option>";
+            foreach ($config['suitConfig'] as $Invar) {
+                $suitOption .= "<option value=" . $Invar['id'] . ">" . $Invar['name'] . "</option>";
+            }
+            $suitOption .= '</select>';
+        }
+        // 装备配置
+        $equipOption = '装备ID <input type="checkbox" value="equipid" name="checkbox[]">
 	<input type="text" class="form-control" placeholder="装备或饰品的ID" 
 	name="equipid" onblur="checkProp(this.value,2)">';
-	
-	if ( count($config['equipConfig'])>0 ){
-	
-		$equipOption = '装备:<input type="checkbox" value="equipid" name="checkbox[]">&nbsp';
-		$equipOption .= '<select id="equipid" name="equipid"
+
+        if (count($config['equipConfig']) > 0) {
+
+            $equipOption = '装备:<input type="checkbox" value="equipid" name="checkbox[]">&nbsp';
+            $equipOption .= '<select id="equipid" name="equipid"
 		class="selectpicker" data-live-search="true" data-live-search-style="begins">';
-		$equipOption.="<option value=0>--装备列表--</option>";
-		foreach ($config['equipConfig'] as $Invar){
-			$equipOption.="<option value=".$Invar['id'].">".$Invar['name']."</option>";
-		}
-		$equipOption.='</select>';
-	}
-	$itemOption =NULL;
-	$ItemHtml = NULL;
-	if ($Itemtype ==false)
-	{
-		 $itemOption1 = self::elementMailOption('propid1',['道具ID1','道具1'],$config,'道具列表');
-		 $itemOption2 = self::elementMailOption('propid2',['道具ID2','道具2'],$config,'道具列表');
-		 $itemOption3 = self::elementMailOption('propid3',['道具ID3','道具3'],$config,'道具列表');
-		 $itemOption4 = self::elementMailOption('propid4',['道具ID4','道具4'],$config,'道具列表');
-		 
-		 $ItemHtml = '<tr>
+            $equipOption .= "<option value=0>--装备列表--</option>";
+            foreach ($config['equipConfig'] as $Invar) {
+                $equipOption .= "<option value=" . $Invar['id'] . ">" . $Invar['name'] . "</option>";
+            }
+            $equipOption .= '</select>';
+        }
+        $itemOption = NULL;
+        $ItemHtml = NULL;
+        if ($Itemtype == false) {
+            $itemOption1 = self::elementMailOption('propid1', ['道具ID1', '道具1'], $config, '道具列表');
+            $itemOption2 = self::elementMailOption('propid2', ['道具ID2', '道具2'], $config, '道具列表');
+            $itemOption3 = self::elementMailOption('propid3', ['道具ID3', '道具3'], $config, '道具列表');
+            $itemOption4 = self::elementMailOption('propid4', ['道具ID4', '道具4'], $config, '道具列表');
+
+            $ItemHtml = '<tr>
 			<td>
 				<div class="control-group">
 					<label class="checkbox-inline">
 					<div class="controls">
-						'.$itemOption1.'
+						' . $itemOption1 . '
 					</div>
 					</label>
 				</div>
@@ -184,7 +183,7 @@ public static  function mailModuleHtml($config=NULL,$Itemtype=false){
 				<div class="control-group">
 					<label class="checkbox-inline">
 					<div class="controls">
-						'.$itemOption2.'
+						' . $itemOption2 . '
 					</div>
 					</label>
 				</div>
@@ -204,7 +203,7 @@ public static  function mailModuleHtml($config=NULL,$Itemtype=false){
 				<div class="control-group">
 					<label class="checkbox-inline">
 					<div class="controls">
-						'.$itemOption3.'
+						' . $itemOption3 . '
 					</div>
 					</label>
 				</div>
@@ -224,7 +223,7 @@ public static  function mailModuleHtml($config=NULL,$Itemtype=false){
 				<div class="control-group">
 					<label class="checkbox-inline">
 					<div class="controls">
-						'.$itemOption4.'
+						' . $itemOption4 . '
 					</div>
 					</label>
 				</div>
@@ -239,14 +238,12 @@ public static  function mailModuleHtml($config=NULL,$Itemtype=false){
 				</div>
 			</td>
 		</tr>';
-	}
-	else
-	{
-		$itemOption = self::elementMailOption('propid',array(),$config,'道具列表',10);	
-		$ItemHtml = $itemOption['ItemInfoHtml']; 
-	}
-	
-$html = <<<EOF
+        } else {
+            $itemOption = self::elementMailOption('propid', array(), $config, '道具列表', 10);
+            $ItemHtml = $itemOption['ItemInfoHtml'];
+        }
+
+        $html = <<<EOF
 <!--<tr>
 	<td>
 		<div class="control-group">
@@ -450,21 +447,32 @@ $html = <<<EOF
 {$ItemHtml}
   <!-- 提示组件 end-->
 EOF;
-return $html;
-}
+        return $html;
+    }
 
- 
-public static function show($error_code,$title,$content){
-	 	$status = (Int)$status;
-		switch($error_code){
-			case 1: $error_code ='success';break;
-			case 2: $error_code ='info';break;
-			case 3: $error_code ='warning';break;
-			case 4: $error_code ='danger';break;
-			default:'';break;			
-		}
-      	//组装  modal-backdrop, .modal-backdrop.fade.in
-$html = <<<EOF
+
+    public static function show($error_code, $title, $content)
+    {
+        $status = (Int)$status;
+        switch ($error_code) {
+            case 1:
+                $error_code = 'success';
+                break;
+            case 2:
+                $error_code = 'info';
+                break;
+            case 3:
+                $error_code = 'warning';
+                break;
+            case 4:
+                $error_code = 'danger';
+                break;
+            default:
+                '';
+                break;
+        }
+        //组装  modal-backdrop, .modal-backdrop.fade.in
+        $html = <<<EOF
 
       			 
     <!-- 提示组件 begin-->
@@ -488,13 +496,13 @@ $html = <<<EOF
 		
 EOF;
         return $html;
-	
-}
 
-public static  function function_statData_script($clickByid="type",
-		$lookbyid="lookstatusid",$optionbyid="optiontimid",$value='default',$idto='')
-{
-	$scriptjava = "
+    }
+
+    public static function function_statData_script($clickByid = "type",
+                                                    $lookbyid = "lookstatusid", $optionbyid = "optiontimid", $value = 'default', $idto = '')
+    {
+        $scriptjava = "
 	<script>
 	window.onload = function()
 	{
@@ -521,50 +529,50 @@ public static  function function_statData_script($clickByid="type",
 	}
 }
 </script>";
-	return $scriptjava;
-}
+        return $scriptjava;
+    }
 
 // cdk new add 
-public static function cdkToolboxHtml( ) 
-{     	
-		$style ="style='margin:0px';";
-		 
-	 	$maxidBtn = '';
-	 	// 礼包名称
-	 	$cdkname ="<input type='text' style='' class='input-mini' 
+    public static function cdkToolboxHtml()
+    {
+        $style = "style='margin:0px';";
+
+        $maxidBtn = '';
+        // 礼包名称
+        $cdkname = "<input type='text' style='' class='input-mini' 
 	 	name='cdkname'>";
-	 	// 金币
-	 	$goldBtn = "<input type='text' title='金币' id='gold' style='' class='input-mini' 
+        // 金币
+        $goldBtn = "<input type='text' title='金币' id='gold' style='' class='input-mini' 
 	 	name='gold'>";
-	 	// 钻石
-	 	$diamond = "<input type='text' title='钻石'style='' class='input-mini' 
+        // 钻石
+        $diamond = "<input type='text' title='钻石'style='' class='input-mini' 
 	 	name='diamond'>";
-	 	// 装备
-	 	$equipment ="<input type='text' title='装备'style='' class='input-mini' 
+        // 装备
+        $equipment = "<input type='text' title='装备'style='' class='input-mini' 
 	 	name='equipment'>";
-	 	// 道具1
-	 	$propst1 ="<input type='text' title='道具1'style='' class='input-mini' 
+        // 道具1
+        $propst1 = "<input type='text' title='道具1'style='' class='input-mini' 
 	 	name='props1'>";
-	 	// 道具2
-	 	$propst2 ="<input type='text' title='道具2'style='' class='input-mini' 
+        // 道具2
+        $propst2 = "<input type='text' title='道具2'style='' class='input-mini' 
 	 	name='props2'>";
-	 	// 道具3
-	 	$propst3 ="<input type='text' title='道具3'style='' class='input-mini' 
+        // 道具3
+        $propst3 = "<input type='text' title='道具3'style='' class='input-mini' 
 	 	name='props3'>";
-	 	
-	 	$propst4 ="<input type='text' title='道具4'style='' class='input-mini' 
+
+        $propst4 = "<input type='text' title='道具4'style='' class='input-mini' 
 	 	name='props4'>";
-	 	
-	 	$title = "<textarea type='text' title='备注'style='' class='input-mini' 
+
+        $title = "<textarea type='text' title='备注'style='' class='input-mini' 
 	 	name='title'></textarea>";
-	 	
-	 	// 提交
-	 	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
+
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
 		data-style="expand-right" name="sub_btn" type="submit" id="btn_date">
-		<span class="ladda-label"> 保存</span></button>'; 
-	 	
-      	//组装
-      	$html = <<<EOF
+		<span class="ladda-label"> 保存</span></button>';
+
+        //组装
+        $html = <<<EOF
       			 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -624,27 +632,28 @@ public static function cdkToolboxHtml( )
 		
 EOF;
         return $html;
-}
+    }
+
 // 充值订单查询
-public static function rechargeHtml($data) 
-{     	
-		$style ="style='margin:0px';";
-		 
-	 	$maxidBtn = '';
-	 	// 开始时间
-	 	$startTime ='<input type="text" class="datetimepicker form-control" 
+    public static function rechargeHtml($data)
+    {
+        $style = "style='margin:0px';";
+
+        $maxidBtn = '';
+        // 开始时间
+        $startTime = '<input type="text" class="datetimepicker form-control" 
       	placeholder="开始时间"  name="startTime" />';
-    	// 截止时间
-	 	$endTime ='<input type="text" class="datetimepicker form-control" 
+        // 截止时间
+        $endTime = '<input type="text" class="datetimepicker form-control" 
       	placeholder="截止时间"  name="endTime" />';
-    	$plafrom = self::getplatListInfo();
-    	
-    	$sid = "<select name='sid' id='ServerId' class='form-control' 
+        $plafrom = self::getplatListInfo();
+
+        $sid = "<select name='sid' id='ServerId' class='form-control' 
     	style='width:120px;display:none' title='请选择区服'></select>";
-	 	// 平台
-	 	//$plafrom = $platList;
-	 	// 渠道
-	 	$channel = "
+        // 平台
+        //$plafrom = $platList;
+        // 渠道
+        $channel = "
 	 	<div id='container2'>
 	 	 <div class='side-by-side clearfix'> 
 	      <div>               
@@ -658,15 +667,14 @@ public static function rechargeHtml($data)
 	      </div>
 	    </div>
 	    <div>";
-	 	 
-	 	$orderstauDat = Config::get("key.order");
-	 	$option = '';
-	 	foreach($orderstauDat as $key=>$var)
-	 	{
-	 		$option.="<option value='{$key}'>{$var}</option> ";	
-	 	}
-	 	// 订单状态
-	 	$orderstau = "
+
+        $orderstauDat = Config::get("key.order");
+        $option = '';
+        foreach ($orderstauDat as $key => $var) {
+            $option .= "<option value='{$key}'>{$var}</option> ";
+        }
+        // 订单状态
+        $orderstau = "
 	 	<div id='container3'>
 	 	 <div class='side-by-side clearfix'> 
 	      <div>               
@@ -678,62 +686,61 @@ public static function rechargeHtml($data)
 	    </div>
 	    <div>
 	 	";
-	 	 
-	 	// 账号
-	 	$account = "<input type='text' title='账号' id='account' style='' 
+
+        // 账号
+        $account = "<input type='text' title='账号' id='account' style='' 
 	 	class='input-mini' name='account'>";
-	 	// 角色昵称
-	 	$name= '<input type="text" style="height:20px"  class="newInput"
+        // 角色昵称
+        $name = '<input type="text" style="height:20px"  class="newInput"
     		name="name" title="角色名" size="10"　  placeholder="用户昵称">';
-	 	
-	 	// uid
-	 	$uid = "<input type='text' title='uid'style='' class='input-mini' 
+
+        // uid
+        $uid = "<input type='text' title='uid'style='' class='input-mini' 
 	 	name='uid'>";
-	 	 
-	 	// 联运订单号
-	 	$orderid ="<input type='text' title='联运订单号'style='' class='input-mini' 
+
+        // 联运订单号
+        $orderid = "<input type='text' title='联运订单号'style='' class='input-mini' 
 	 	name='orderid'>";
-	 	// 游戏订单号
-	 	$gamOrderId ="<input type='text' title='游戏订单号'style='' class='input-mini' 
+        // 游戏订单号
+        $gamOrderId = "<input type='text' title='游戏订单号'style='' class='input-mini' 
 	 	name='gamorderid'>";
-	 	
-	 	// uin
-	 	$uin ="<input type='text' title='uin' style='' class='input-mini' 
+
+        // uin
+        $uin = "<input type='text' title='uin' style='' class='input-mini' 
 	 	name='uin'>";
-	 	// sid
-	 	/* $sid ="<input type='text' title='区服ID'   class='input-mini' 
-	 	name='sid'>"; */
-	 	
-	 	$roleid ="<input type='text' title='角色ID'style='' class='input-mini' 
+        // sid
+        /* $sid ="<input type='text' title='区服ID'   class='input-mini'
+        name='sid'>"; */
+
+        $roleid = "<input type='text' title='角色ID'style='' class='input-mini' 
 	 	name='roleid'>";
-		
-	 	$ordertype = Config::get("key.ordertype");
-         
-		foreach ($ordertype as  $Typekey=>$Typevar)
-		{
-			$typeoption.=" <option value='{$Typekey}'>{$Typevar}</option>";
-		}
-	 	$orderType = "
+
+        $ordertype = Config::get("key.ordertype");
+
+        foreach ($ordertype as $Typekey => $Typevar) {
+            $typeoption .= " <option value='{$Typekey}'>{$Typevar}</option>";
+        }
+        $orderType = "
 	 	<select name='orderType' id='orderType' style='width:160px;'> 		  
         <option value='0'>--是否测试--</option>   
 	 	$typeoption
 	    </select>";
-	 	
-	 	// 提交
-	 	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
+
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
 		data-style="expand-right" name="sub_btn" type="submit"  id="btn_date">
-		<span class="ladda-label"> 查询订单</span></button>'; 
-	 	
-	 	$readySubmitJs =!empty($data)?self::readySubmit('ExportfileBtn','from1'):"";
-	 	
-		$btnType = !empty($data)
-		?
-		'<input  type="button"  style="padding:0;width:120px" 
+		<span class="ladda-label"> 查询订单</span></button>';
+
+        $readySubmitJs = !empty($data) ? self::readySubmit('ExportfileBtn', 'from1') : "";
+
+        $btnType = !empty($data)
+            ?
+            '<input  type="button"  style="padding:0;width:120px" 
     	 class="btn btn-success" value="Dowload" id="ExportfileBtn"/>'
-		:""; 
-		
-      	//组装
-      	$html = <<<EOF
+            : "";
+
+        //组装
+        $html = <<<EOF
       			 {$readySubmitJs}
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -803,12 +810,12 @@ public static function rechargeHtml($data)
 		
 EOF;
         return $html;
-}
+    }
 
 //事物提交
-public static function readySubmit($clickID,$sumitID)
-{
-	$scriptjave ="
+    public static function readySubmit($clickID, $sumitID)
+    {
+        $scriptjave = "
     	<script>
 			$(document).ready(function() { 
 			  $('#{$clickID}').click(function() 
@@ -818,35 +825,36 @@ public static function readySubmit($clickID,$sumitID)
 			});
 		</script>
     	";
-	return $scriptjave;
-}
-public static function cdkHtml($object='') 
-{     	
-		$btnType =NULL;
-	 
-		$style ="style='margin:0px';";
-	 
-		// 礼包ID btn
-	 	$maxidBtn ="<input type='text' style='' class='input-mini' 
+        return $scriptjave;
+    }
+
+    public static function cdkHtml($object = '')
+    {
+        $btnType = NULL;
+
+        $style = "style='margin:0px';";
+
+        // 礼包ID btn
+        $maxidBtn = "<input type='text' style='' class='input-mini' 
 	 	name='giftid'>";
-	 	// 礼包名称
-	 	$cdkname ="<input type='text' style='' class='input-mini' 
+        // 礼包名称
+        $cdkname = "<input type='text' style='' class='input-mini' 
 	 	name='name'>";
-	 	
-	 	// 开始日期
-	 	$startTime ="<input type='text' class='datetimepicker form-control' 
+
+        // 开始日期
+        $startTime = "<input type='text' class='datetimepicker form-control' 
 	 	name='startTime'>";
-	 	// 截止日期
-	 	$endTime ="<input type='text' class='datetimepicker form-control' 
+        // 截止日期
+        $endTime = "<input type='text' class='datetimepicker form-control' 
 	 	name='endTime'>";
-	 	
-	 	// 提交
-	 	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
+
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
 		data-style="expand-right" name="sub" type="submit" id="sub_date">
-		<span class="ladda-label"> 查询</span></button>'; 
-	 	
-      	//组装
-      	$html = <<<EOF
+		<span class="ladda-label"> 查询</span></button>';
+
+        //组装
+        $html = <<<EOF
       			 {$readySubmitJs}
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -887,58 +895,58 @@ public static function cdkHtml($object='')
 		
 EOF;
         return $html;
-}
- 
+    }
+
 //CDK SET 
-public static function CdkSetHtml() 
-{     	
-		
-		$style ="style='margin:0px';";
-		/*$platfrom = Accountreplace_Service::getServer(true,'global');
-		$maxid = CDK_Model::MaxID($platfrom);	  */
-		// 礼包ID btn
-	 	$maxidBtn =self::Get_giftInfo('giftid');
-	 	// 礼包说明
-	 	$cdkname ="<input type='text' style='' class='input-mini' 
+    public static function CdkSetHtml()
+    {
+
+        $style = "style='margin:0px';";
+        /*$platfrom = Accountreplace_Service::getServer(true,'global');
+        $maxid = CDK_Model::MaxID($platfrom);	  */
+        // 礼包ID btn
+        $maxidBtn = self::Get_giftInfo('giftid');
+        // 礼包说明
+        $cdkname = "<input type='text' style='' class='input-mini' 
 	 	name='name'>";
-	 	// 礼包码
-	 	$code = null;
-	 	// 礼包类型
-	 	$giftType ="<input type='text' class='datetimepicker form-control' 
+        // 礼包码
+        $code = null;
+        // 礼包类型
+        $giftType = "<input type='text' class='datetimepicker form-control' 
 	 	name='giftType'>";
-	 	
-	 	// 开始日期
-	 	$startTime ="<input type='text' class='datetimepicker form-control' 
+
+        // 开始日期
+        $startTime = "<input type='text' class='datetimepicker form-control' 
 	 	name='startTime'>";
-	 	
-	 	// 截止日期
-	 	$endTime ="<input type='text' class='datetimepicker form-control' 
+
+        // 截止日期
+        $endTime = "<input type='text' class='datetimepicker form-control' 
 	 	name='endTime'>";
-	 	// 金币
-	 	$goldBtn = "<input type='text' title='金币' id='gold' style='' class='input-mini' 
+        // 金币
+        $goldBtn = "<input type='text' title='金币' id='gold' style='' class='input-mini' 
 	 	name='gold'>";
-	 	// 钻石
-	 	$diamond = "<input type='text' title='钻石'style='' class='input-mini' 
+        // 钻石
+        $diamond = "<input type='text' title='钻石'style='' class='input-mini' 
 	 	name='diamond'>";
-	 	// 装备
-	 	$equipment ="<input type='text' title='装备'style='' class='input-mini' 
+        // 装备
+        $equipment = "<input type='text' title='装备'style='' class='input-mini' 
 	 	name='equipment'>";
-	 	// 道具1
-	 	$propst1 ="<input type='text' title='道具1'style='' class='input-mini' 
+        // 道具1
+        $propst1 = "<input type='text' title='道具1'style='' class='input-mini' 
 	 	name='props1'>";
-	 	// 道具2
-	 	$propst2 ="<input type='text' title='道具2'style='' class='input-mini' 
+        // 道具2
+        $propst2 = "<input type='text' title='道具2'style='' class='input-mini' 
 	 	name='props2'>";
-	 	// 道具3
-	 	$propst3 ="<input type='text' title='道具3'style='' class='input-mini' 
+        // 道具3
+        $propst3 = "<input type='text' title='道具3'style='' class='input-mini' 
 	 	name='props3'>";
-	 	// 提交
-	 	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
 		data-style="expand-right" name="sub_btn" type="submit" id="btn_date">
-		<span class="ladda-label">查询</span></button>'; 
-	 	
-      	//组装
-      	$html = <<<EOF
+		<span class="ladda-label">查询</span></button>';
+
+        //组装
+        $html = <<<EOF
       			 {$readySubmitJs}
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -980,46 +988,48 @@ public static function CdkSetHtml()
 		
 EOF;
         return $html;
-}
-public static function Get_giftInfo($id=NULL)
-{
-	$id = empty($id)?'giftId':$id;
-	
-	$platfrom = Platfrom_Service::getServer(true,'globaldb');  
-	
-	//$cdkMod = new  CDK_Model();
-	$giftinfo = CDK_Model::Stat_giftInfo($platfrom); 
-	
-	$suitOption = '<select id="giftId" name="'.$id.'"
+    }
+
+    public static function Get_giftInfo($id = NULL)
+    {
+        $id = empty($id) ? 'giftId' : $id;
+
+        $platfrom = Platfrom_Service::getServer(true, 'globaldb');
+
+        //$cdkMod = new  CDK_Model();
+        $giftinfo = CDK_Model::Stat_giftInfo($platfrom);
+
+        $suitOption = '<select id="giftId" name="' . $id . '"
 		class="selectpicker" data-live-search="true" data-live-search-style="begins">';
-	$suitOption.="<option value=0>--礼包信息--</option>";
-	foreach ($giftinfo as $Invar){
-		$suitOption.="<option value=".$Invar['id'].">".$Invar['bewrite']."</option>";
-	}
-	$suitOption.='</select>';	
-	
-	return $suitOption;
-}
-//CDK SET 
-public static function rolebanHtml($formaction='index') 
-{     	 
-		$style ="style='margin:0px';";
-		
-		//$serverco$_COOKIE['roleban-server'];
-		if ($_COOKIE['roleban-server']){
-			
-			echo $_COOKIE['roleban-server'];
-		}
-		$platHtml = self::getplatListInfo('width:90%');
-		// sid
-		 
-		$sid = "<select name='server' id='ServerId'
+        $suitOption .= "<option value=0>--礼包信息--</option>";
+        foreach ($giftinfo as $Invar) {
+            $suitOption .= "<option value=" . $Invar['id'] . ">" . $Invar['bewrite'] . "</option>";
+        }
+        $suitOption .= '</select>';
+
+        return $suitOption;
+    }
+
+//CDK SET
+    public static function rolebanHtml($formaction = 'index')
+    {
+        $style = "style='margin:0px';";
+
+        //$serverco$_COOKIE['roleban-server'];
+        if ($_COOKIE['roleban-server']) {
+
+            echo $_COOKIE['roleban-server'];
+        }
+        $platHtml = self::getplatListInfo('width:90%');
+        // sid
+
+        $sid = "<select name='server' id='ServerId'
 		class='form-control' style='width:100%;display:none' 
 		title='请选择区服'></select>";
-		//角色ID
-		$roleid = "<input type='text' style='' class='input-mini' 
+        //角色ID
+        $roleid = "<input type='text' style='' class='input-mini' 
 	 	name='roleid'>";
-		$lockStatus = "
+        $lockStatus = "
 	 	<select name='lockStatus' class='form-control' style='width:90%'>	 
 	 		<option value=0>--请选择--</option>	  
 			<option value=1>禁言</option>
@@ -1027,31 +1037,31 @@ public static function rolebanHtml($formaction='index')
 			<option value=3>解封禁言</option>
 			<option value=4>解封登陆</option>
 	 	</select>";
-		
-		// 开始时间
-		$startTime = '<input type="text" 
+
+        // 开始时间
+        $startTime = '<input type="text" 
 		class="datetimepicker form-control" placeholder="开始时间" name="startTime">';
-		// 截止时间
-		
-		$time = date("Y-m-d H:i:s",time());
-		
-		$endTime = "<input type='text'
+        // 截止时间
+
+        $time = date("Y-m-d H:i:s", time());
+
+        $endTime = "<input type='text'
 		class='datetimepicker form-control' 
 		placeholder='结束时间' name='endtime' value='{$time}'>";
-		
-	 	// 提交
-	 	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button progress-demo" 
+
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button progress-demo" 
 		data-style="expand-right" name="sub_btn"  type="submit" id="btn_date">
-		<span class="ladda-label"> 查询</span></button>'; 
-	 	
-	 	$roleBanListType = 0 ;
-	 	$display = 'display:none;';
-	 	if ($formaction=='roleBanlogIndex')
-	 	{	$display = 'display:block';
-	 		$roleBanListType = 1; 
-	 	}
-      	//组装
-      	$html = <<<EOF
+		<span class="ladda-label"> 查询</span></button>';
+
+        $roleBanListType = 0;
+        $display = 'display:none;';
+        if ($formaction == 'roleBanlogIndex') {
+            $display = 'display:block';
+            $roleBanListType = 1;
+        }
+        //组装
+        $html = <<<EOF
       			 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1091,48 +1101,48 @@ public static function rolebanHtml($formaction='index')
 		
 EOF;
         return $html;
-}
- 
-public static function rolebanlogHtml() 
-{     	
-		
-		$style ="style='margin:0px';";
-		$platHtml = self::getplatListInfo('width:90%');
-		// sid			
-		$sid = "<select name='server' id='ServerId'
+    }
+
+    public static function rolebanlogHtml()
+    {
+
+        $style = "style='margin:0px';";
+        $platHtml = self::getplatListInfo('width:90%');
+        // sid
+        $sid = "<select name='server' id='ServerId'
 		class='form-control' style='width:100%;display:none'
 		title='请选择区服'></select>";
 
-		//角色ID
-		$roleid = "<input type='text' class='input-mini' name='player_id'>";
-		// 开始日期
-	 	$startTime ="<input type='text' class='datetimepicker form-control' 
+        //角色ID
+        $roleid = "<input type='text' class='input-mini' name='player_id'>";
+        // 开始日期
+        $startTime = "<input type='text' class='datetimepicker form-control' 
 		name='startTime'>";
-	 	$Nick_name = "<input type='text' class='input-mini' name='nick_name'>";
-	 	//<option>账号封禁</option>
-	 	$type = "
+        $Nick_name = "<input type='text' class='input-mini' name='nick_name'>";
+        //<option>账号封禁</option>
+        $type = "
 	 	<select name='type' class='form-control' style='width:100px'>	 
 	 	<option value=''>--请选择--</option>	 
 	 	<option value=1>角色封禁</option>	 		 	
 	 	</select>";
-	 	
-	 	$status = "<select name='lockStatus' class='form-control' style='width:100px'>
+
+        $status = "<select name='lockStatus' class='form-control' style='width:100px'>
 	 	<option value=''>--请选择--</option>
 		 	<option value=1>禁言</option>
 			<option value=2>封号</option>
 			<option value=3>解封禁言</option>
 			<option value=4>解封登陆</option>	
 	 	</select>";
-	 	// 截止日期
-	 	$endTime ="<input type='text' class='datetimepicker form-control' 
+        // 截止日期
+        $endTime = "<input type='text' class='datetimepicker form-control' 
 	 	name='endTime'>";
-	 	// 提交
-	 	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
 		data-style="expand-right" name="sub_btn" type="submit" id="btn_date">
 		<span class="ladda-label"> 查询</span></button>';
-	 	
-      	//组装
-      	$html = <<<EOF
+
+        //组装
+        $html = <<<EOF
       			 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1181,69 +1191,71 @@ public static function rolebanlogHtml()
 		
 EOF;
         return $html;
-} 	
-public static function getServerInfo($name)
-{
-	$platformOut = session::get('AllplatformInfo');
+    }
 
-	if ($platformOut)
-	{
-		$html ='<select name="'.$name.'">';
+    public static function getServerInfo($name)
+    {
+        $platformOut = session::get('AllplatformInfo');
 
-		foreach ($platformOut as $var)
-		{
-			if ($var['type']==0){continue;}
-			$platformList[(int)$var['type']] = $var; 
-		}
+        if ($platformOut) {
+            $html = '<select name="' . $name . '">';
 
-		ksort($platformList);
+            foreach ($platformOut as $var) {
+                if ($var['type'] == 0) {
+                    continue;
+                }
+                $platformList[(int)$var['type']] = $var;
+            }
 
-		foreach ($platformList as $var)
-		{
-			if ($var['type']==0){continue;}
+            ksort($platformList);
 
-			$platformList[(int)$var['type']] = $var;
+            foreach ($platformList as $var) {
+                if ($var['type'] == 0) {
+                    continue;
+                }
 
-			$serverHtml .= '<option value='.$var['type'].'>'.$var['type'].'区'.'</option>';
-		}
+                $platformList[(int)$var['type']] = $var;
 
-		$serverHtmlTotal = $html.$serverHtml.'</select>';
-		return $serverHtmlTotal;
-	}
-	return NULL;
-}
+                $serverHtml .= '<option value=' . $var['type'] . '>' . $var['type'] . '区' . '</option>';
+            }
+
+            $serverHtmlTotal = $html . $serverHtml . '</select>';
+            return $serverHtmlTotal;
+        }
+        return NULL;
+    }
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // account info 
-public static function accountHtml( )
-{
-	$style ="style='margin:0px';";
-		 
-	$maxidBtn = '';
-	//$sid = self::getServerInfo('sid');
-	
-	$sid = "<select name='sid' id='ServerId' 
+    public static function accountHtml()
+    {
+        $style = "style='margin:0px';";
+
+        $maxidBtn = '';
+        //$sid = self::getServerInfo('sid');
+
+        $sid = "<select name='sid' id='ServerId' 
 	class='form-control' style='width:120px;display:none' title='请选择区服'></select>";
-	 
-	/* $roleIdHtml = '<input type="text" style="height:20px"  class="newInput"
-    	name="roleid"  title="角色ID" size="10" >'; */
-	
-	$name= '<input type="text" style="height:20px"  class="newInput"
+
+        /* $roleIdHtml = '<input type="text" style="height:20px"  class="newInput"
+            name="roleid"  title="角色ID" size="10" >'; */
+
+        $name = '<input type="text" style="height:20px"  class="newInput"
     	name="name" title="角色名" size="10"　  placeholder="用户昵称">';
-	$status = '';
-	
-	//$selecttype = self::selectregionType($type);
-	$selecttype = self::getplatListInfo();
-	
-	//$sid ="<input type='text' class='input-mini' name='sid'>";
-	// 角色ID
-	$userId = "<input type='text'  
-	placeholder='用户ID编号' class='input-mini'name='userid'>";	
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
+        $status = '';
+
+        //$selecttype = self::selectregionType($type);
+        $selecttype = self::getplatListInfo();
+
+        //$sid ="<input type='text' class='input-mini' name='sid'>";
+        // 角色ID
+        $userId = "<input type='text'  
+	placeholder='用户ID编号' class='input-mini'name='userid'>";
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button" 
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
-	<span class="ladda-label"> 查询</span></button>';	 
-	//组装
-	$html = <<<EOF
+	<span class="ladda-label"> 查询</span></button>';
+        //组装
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1279,32 +1291,32 @@ public static function accountHtml( )
 <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
 
-public static function lotteryHtml( )
-{
-	$style ="style='margin:0px';";
-	$formJs = " 
+    public static function lotteryHtml()
+    {
+        $style = "style='margin:0px';";
+        $formJs = " 
 	</script>";
-	$maxidBtn = '';
-	// 区服ID
-	$server ="<input type='text' class='input-mini' name='server'>";
-	// 角色ID
-	/*<option value=3>遗迹</option> 
-		<option value=4>王座</option>*/
-	$type = "<select name='type' class='form-control' style='width:100px'>
+        $maxidBtn = '';
+        // 区服ID
+        $server = "<input type='text' class='input-mini' name='server'>";
+        // 角色ID
+        /*<option value=3>遗迹</option>
+            <option value=4>王座</option>*/
+        $type = "<select name='type' class='form-control' style='width:100px'>
 	 	<option value=0>--请选择--</option>
 	 	<option value=1>限时</option>
 		<option value=2>每周</option>
 		<option value=3>常驻</option>
 	 	</select>";
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装
-	$html = <<<EOF
+        //组装
+        $html = <<<EOF
 		{$formJs}
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1338,39 +1350,39 @@ public static function lotteryHtml( )
 <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
 
 // 公告发布
-public static function noticeHtml( )
-{
-	$displayScript = self::function_statData_script("sendType","userid","usertitle","","idto");
-	
-	$style ="style='margin:0px';";
+    public static function noticeHtml()
+    {
+        $displayScript = self::function_statData_script("sendType", "userid", "usertitle", "", "idto");
 
-	$maxidBtn = '';
-	// 区服ID
-	$sid ="<input type='text'   class='input-mini' id='server' name='server' >";
-	// 发布类型
-	$sendtype = "
+        $style = "style='margin:0px';";
+
+        $maxidBtn = '';
+        // 区服ID
+        $sid = "<input type='text'   class='input-mini' id='server' name='server' >";
+        // 发布类型
+        $sendtype = "
 			<select name='sendType' id='sendType' style='width:155px'>
 			 	<option value='0'>--请选择--</option>
        			<option value='1'>角色ID</option>
       			 <option value='-1'>全服</option>
 			</select>
 	";
-	$usertitle = "<font id='usertitle'></font>";
-	// 角色ID
-	$userId = "<input type='text'    class='input-mini'name='userid' id='userid'>";
-	// 提交
-	$submitBtn = '<button class="btn btn-lg btn-success ladda-button"
+        $usertitle = "<font id='usertitle'></font>";
+        // 角色ID
+        $userId = "<input type='text'    class='input-mini'name='userid' id='userid'>";
+        // 提交
+        $submitBtn = '<button class="btn btn-lg btn-success ladda-button"
 				data-style="expand-right" name="sut" type="submit" id="btn_date">
 						  发布公告 </button>';
-	
-	$message = '<textarea  name="message" rows="3" cols="50	"></textarea>';
-	$loopTimes = '<input type="text" class="form-control" name="loopTimes"  />';
-	//组装
-	$html = <<<EOF
+
+        $message = '<textarea  name="message" rows="3" cols="50	"></textarea>';
+        $loopTimes = '<input type="text" class="form-control" name="loopTimes"  />';
+        //组装
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1426,32 +1438,33 @@ public static function noticeHtml( )
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
+
 //日志
-public static function LOGHtml( )
-{
-	$style ="style='margin:0px';";
-	$maxidBtn = '';
-	// 区服ID
-	$startTime ='<input type="text" class="datetimepicker form-control" 
+    public static function LOGHtml()
+    {
+        $style = "style='margin:0px';";
+        $maxidBtn = '';
+        // 区服ID
+        $startTime = '<input type="text" class="datetimepicker form-control" 
 	placeholder="创建日期"  name="startTime" style="width:auto;"/>';
-	// 角色ID
-	$endtime = '<input type="text" class="datetimepicker form-control" 
-	placeholder="结束时间"  name="endtime" style="width:auto;"/>';	
-	$channel = 
-	'<select name="channelId"   style="width:auto;">
+        // 角色ID
+        $endtime = '<input type="text" class="datetimepicker form-control" 
+	placeholder="结束时间"  name="endtime" style="width:auto;"/>';
+        $channel =
+            '<select name="channelId"   style="width:auto;">
 		<option value="0">--请选择渠道--</option> 
 		<option value="3">后台账号操作</option>
-	</select>';	
-	$account = 
-	'<input  name="account" placeholder="管理员" class="input-mini" style="width:auto;" type="text">';	
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+	</select>';
+        $account =
+            '<input  name="account" placeholder="管理员" class="input-mini" style="width:auto;" type="text">';
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
-	<span class="ladda-label"> 查询</span></button>';	
-	//组装
-	$html = <<<EOF
+	<span class="ladda-label"> 查询</span></button>';
+        //组装
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1489,32 +1502,33 @@ public static function LOGHtml( )
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
+
 // 系统缓存adminCacheHtml
-public static function adminCacheHtml( )
-{
-	$style ="style='margin:0px';";
-	$maxidBtn = '';
-	// 区服ID
-	$server ="<input type='text'   class='input-mini' id='server' name='server' >";
-	// 开始时间
-	$startTime ='<input type="text" class="datetimepicker form-control"
+    public static function adminCacheHtml()
+    {
+        $style = "style='margin:0px';";
+        $maxidBtn = '';
+        // 区服ID
+        $server = "<input type='text'   class='input-mini' id='server' name='server' >";
+        // 开始时间
+        $startTime = '<input type="text" class="datetimepicker form-control"
 	 name="startTime" style="width:auto;"/>';
-	
-	$lasttim = date('Y-m-d H:i:s',time());	
-	// 截止时间
-	$endtime = "<input type='text' class='datetimepicker form-control'
+
+        $lasttim = date('Y-m-d H:i:s', time());
+        // 截止时间
+        $endtime = "<input type='text' class='datetimepicker form-control'
 	 name='endtime' style='width:auto;' value='{$lasttim}'/>";
-	 
-	$account =
-	'<input  name="account" class="input-mini" style="width:auto;" type="text">';
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+
+        $account =
+            '<input  name="account" class="input-mini" style="width:auto;" type="text">';
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装
-	$html = <<<EOF
+        //组装
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1555,38 +1569,39 @@ public static function adminCacheHtml( )
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
+
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-public static function fruitItemConfigHtml( )
-{
-	$style ="style='margin:0px';";
-	$maxidBtn = '';
-	// 道具ID
-	$itemId ="<input type='text'   class='input-mini'  name='itemId' >";
-	// 道具名称
-	$itemName ="<input type='text'   class='input-mini' name='itemName' >";
-	// 道具创建开始日期
-	$startTime ='<input type="text" class="datetimepicker form-control"
+    public static function fruitItemConfigHtml()
+    {
+        $style = "style='margin:0px';";
+        $maxidBtn = '';
+        // 道具ID
+        $itemId = "<input type='text'   class='input-mini'  name='itemId' >";
+        // 道具名称
+        $itemName = "<input type='text'   class='input-mini' name='itemName' >";
+        // 道具创建开始日期
+        $startTime = '<input type="text" class="datetimepicker form-control"
 	 name="startTime" style="width:auto;"/>';
-	// 道具创建结束日期$lasttim = date('Y-m-d H:i:s',time());
-	$endtime = "<input type='text' class='datetimepicker form-control'
-	name='endtime' style='width:auto;'/>";	
-	// 道具类型
-	$itemType ="<select style='width:160px;' tabindex='4' name='itemType'>
+        // 道具创建结束日期$lasttim = date('Y-m-d H:i:s',time());
+        $endtime = "<input type='text' class='datetimepicker form-control'
+	name='endtime' style='width:auto;'/>";
+        // 道具类型
+        $itemType = "<select style='width:160px;' tabindex='4' name='itemType'>
 	          <option value='0'>红包</option> 
 	          <option value='1'>话费</option>
 			  <option value='2'>实物</option>
 	        </select>";
-	$account =
-	'<input  name="account" class="input-mini" style="width:auto;" type="text">';
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+        $account =
+            '<input  name="account" class="input-mini" style="width:auto;" type="text">';
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装
-	$html = <<<EOF
+        //组装
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1632,32 +1647,32 @@ public static function fruitItemConfigHtml( )
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
 
-public static function fruitItemPrizesHtml()
-{
-	$style ="style='margin:0px';";
-	$maxidBtn = '';
-	// 道具配置ID
-	$itemId ="<input type='text'   class='input-mini'  name='itemId' >";
-	// 道具名称
-	$itemName ="<input type='text'   class='input-mini' name='itemName' >";
-	 
-	// 道具类型
-	$itemType ="<select style='width:160px;' tabindex='4' name='itemType'>
+    public static function fruitItemPrizesHtml()
+    {
+        $style = "style='margin:0px';";
+        $maxidBtn = '';
+        // 道具配置ID
+        $itemId = "<input type='text'   class='input-mini'  name='itemId' >";
+        // 道具名称
+        $itemName = "<input type='text'   class='input-mini' name='itemName' >";
+
+        // 道具类型
+        $itemType = "<select style='width:160px;' tabindex='4' name='itemType'>
 	          <option value='0'>红包</option>
 	          <option value='1'>话费</option>
 			  <option value='2'>实物</option>
 	        </select>";
-	$account =
-	'<input  name="account" class="input-mini" style="width:auto;" type="text">';
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+        $account =
+            '<input  name="account" class="input-mini" style="width:auto;" type="text">';
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装
-	$html = <<<EOF
+        //组装
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1698,49 +1713,48 @@ public static function fruitItemPrizesHtml()
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
+        return $html;
+    }
+
 //
 
-public static function getplatListInfo($stytle=NULL,$putId='platById')
-{
-	$platOut  = System_Service::getplatformInfo();
-	$platOptionHtml = '';
-	$OptionHtml='<option value=0>--请选择平台--</option>';
-	foreach ($platOut as $var)
-	{ 
-		$platinfo[$var['id']] = $var['name'];
-	}
-	//
-	foreach ($platinfo as $key=>$var)
-	{
-		$OptionHtml.="<option value={$key}>".$var.'</option>';
-	}
-	if (empty($stytle)){
-		$stytle = 'width:120px';
-	}
-	$selecttype ="
+    public static function getplatListInfo($stytle = NULL, $putId = 'platById')
+    {
+        $platOut = System_Service::getplatformInfo();
+        $platOptionHtml = '';
+        $OptionHtml = '<option value=0>--请选择平台--</option>';
+        foreach ($platOut as $var) {
+            $platinfo[$var['id']] = $var['name'];
+        }
+        //
+        foreach ($platinfo as $key => $var) {
+            $OptionHtml .= "<option value={$key}>" . $var . '</option>';
+        }
+        if (empty($stytle)) {
+            $stytle = 'width:120px';
+        }
+        $selecttype = "
 	<select name='platId' data-plat='platId' id='{$putId}' 
 	class='form-control' style='{$stytle}' title='*设置平台类型'>
 	{$OptionHtml}
 	</select>";
 
-	return  $selecttype;
-}
+        return $selecttype;
+    }
 
 // 用户头像审核
-public static function userPhotos()
-{
-	$platHtml = self::getplatListInfo(NULL,'PlatUserPhotosId');
-	 
-	$ServerIdHtml = "<select name='serverId' id='allclickserver' 
+    public static function userPhotos()
+    {
+        $platHtml = self::getplatListInfo(NULL, 'PlatUserPhotosId');
+
+        $ServerIdHtml = "<select name='serverId' id='allclickserver' 
 	class='form-control' style='width:120px;display:none' title='请选择区服'></select>";
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装 onsubmit="return statCacheVerify(this);" 
-	$html = <<<EOF
+        //组装 onsubmit="return statCacheVerify(this);"
+        $html = <<<EOF
 	
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1774,22 +1788,23 @@ public static function userPhotos()
   <!-- 查询组件 end-->
 	
 EOF;
-	return $html;
-	
-}
-// 活动
-public static function ActivityHtml()
-{
-	$platHtml = self::getplatListInfo();
+        return $html;
 
-	$ServerIdHtml = "<select name='serverId' id='ServerId'
+    }
+
+// 活动
+    public static function ActivityHtml()
+    {
+        $platHtml = self::getplatListInfo();
+
+        $ServerIdHtml = "<select name='serverId' id='ServerId'
 	class='form-control' style='width:120px;display:none' title='请选择区服'></select>";
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装 onsubmit="return statCacheVerify(this);"
-	$html = <<<EOF
+        //组装 onsubmit="return statCacheVerify(this);"
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1823,31 +1838,32 @@ public static function ActivityHtml()
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
-// 全局活动
-public static function GlobalActivityHtml()
-{
-	$lasttim = date('Y-m-d H:i:s',time());
-	
-	$platHtml = self::getplatListInfo();
+        return $html;
+    }
 
-	$ServerIdHtml = "<select name='serverId' id='ServerId'
+// 全局活动
+    public static function GlobalActivityHtml()
+    {
+        $lasttim = date('Y-m-d H:i:s', time());
+
+        $platHtml = self::getplatListInfo();
+
+        $ServerIdHtml = "<select name='serverId' id='ServerId'
 	class='form-control' style='width:120px;display:none' title='请选择区服'></select>";
-	
-	//  全局活动开始日期
-	$startTime ='<input type="text" class="datetimepicker form-control"
+
+        //  全局活动开始日期
+        $startTime = '<input type="text" class="datetimepicker form-control"
 	 name="startTime" style="width:auto;" value="2017-06-07 10:00:00"/>';
-	//  全局活动结束日期
-	$endtime = "<input type='text' class='datetimepicker form-control'
+        //  全局活动结束日期
+        $endtime = "<input type='text' class='datetimepicker form-control'
 	name='endtime' style='width:auto;' value='{$lasttim}'/>";
-	
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装 onsubmit="return statCacheVerify(this);"
-	$html = <<<EOF
+        //组装 onsubmit="return statCacheVerify(this);"
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1881,20 +1897,21 @@ public static function GlobalActivityHtml()
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
-}
-public static function MallHtml()
-{
-	$platHtml = self::getplatListInfo();
+        return $html;
+    }
 
-	$ServerIdHtml = "<select name='serverId' id='ServerId'
+    public static function MallHtml()
+    {
+        $platHtml = self::getplatListInfo();
+
+        $ServerIdHtml = "<select name='serverId' id='ServerId'
 	class='form-control' style='width:120px;display:none' title='请选择区服'></select>";
-	// 提交
-	$submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
+        // 提交
+        $submitBtn = '<button class="btn btn-primary btn-xs ladda-button"
 	data-style="expand-right" name="sut" type="submit" id="btn_date">
 	<span class="ladda-label"> 查询</span></button>';
-	//组装 onsubmit="return statCacheVerify(this);"
-	$html = <<<EOF
+        //组装 onsubmit="return statCacheVerify(this);"
+        $html = <<<EOF
 
        <!-- 查询组件 begin-->
 	   <div class="widget-box">
@@ -1926,13 +1943,14 @@ public static function MallHtml()
   <!-- 查询组件 end-->
 
 EOF;
-	return $html;
+        return $html;
 
-}
-public static function ActivityTableHtml($ifglobal=false)
-{
-	
-	 $thead = '
+    }
+
+    public static function ActivityTableHtml($ifglobal = false)
+    {
+
+        $thead = '
  		<thead>
 		<tr>
 		<th>活动编号</th>
@@ -1953,9 +1971,9 @@ public static function ActivityTableHtml($ifglobal=false)
 		</tr>
 		</thead>
  		';
-	if ($ifglobal==true){
-		
-		$thead = '
+        if ($ifglobal == true) {
+
+            $thead = '
  		<thead>
 		<tr>
 		<th>平台Id</th>
@@ -1975,16 +1993,16 @@ public static function ActivityTableHtml($ifglobal=false)
 		</tr>
 		</thead>
  		';
-	}
-	$html = <<<EOF
+        }
+        $html = <<<EOF
  	{$thead}
 EOF;
-return $html; 
-}
+        return $html;
+    }
 
-public static function MallTableHtml()
-{
-	$thead = '
+    public static function MallTableHtml()
+    {
+        $thead = '
  		<thead>
 			<tr>
 				<th>id</th>
@@ -2002,23 +2020,23 @@ public static function MallTableHtml()
 			</tr>
 		</thead>
  		';
-	$html = <<<EOF
+        $html = <<<EOF
  	{$thead}
 EOF;
- 	return $html;
-}
+        return $html;
+    }
+
 // item 组件
-public static function ItemConfigHtml($itemListObject)
-{
-	$itemlistliHtml = NULL;
-	
-	if (!empty($itemListObject)){
-		
-		foreach ($itemListObject as $invar)
-		{
-			$itemId = $invar['id'];
-			$itemName = trim($invar['name']);			;
-			$itemlistliHtml .= "<li><span style='color: #08c'>{$itemName}</span>							 
+    public static function ItemConfigHtml($itemListObject)
+    {
+        $itemlistliHtml = NULL;
+
+        if (!empty($itemListObject)) {
+
+            foreach ($itemListObject as $invar) {
+                $itemId = $invar['id'];
+                $itemName = trim($invar['name']);;
+                $itemlistliHtml .= "<li><span style='color: #08c'>{$itemName}</span>							 
 			<div style='margin-top: 5px'>
 				<input type='text'  style='width: 30px;height:12px'  
 				id='itemnumbers' placeholder='数量' 
@@ -2028,10 +2046,10 @@ public static function ItemConfigHtml($itemListObject)
 				value='{$itemId}'  id='editUser'  
 				type='checkbox' style='padding: 0px;margin:0px'/></div> 
 			</li>";
-			$i++;
-		}
-	} 
-	$thead = '
+                $i++;
+            }
+        }
+        $thead = '
  		<!--addNotice Modal Bengin-->
 <div class="modal fade" id="addloginNoticeModal" tabindex="-1" role="dialog" aria-labelledby="addloginNoticeModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -2063,7 +2081,7 @@ public static function ItemConfigHtml($itemListObject)
 							</select>
 							</form>
 							<ul class="activity-list" id="iteminfosetId" class="left"> 
-							'.$itemlistliHtml.'
+							' . $itemlistliHtml . '
 							</ul>
 						</div>
 					</div>
@@ -2088,11 +2106,11 @@ public static function ItemConfigHtml($itemListObject)
 	</div>
 </div>
  		';
-	$html = <<<EOF
+        $html = <<<EOF
  	{$thead}
 EOF;
- 	return $html;
-}
+        return $html;
+    }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
 

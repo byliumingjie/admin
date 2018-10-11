@@ -5,27 +5,35 @@
  */
 
 
-$(function() {
-  $("#liOption").multiselect2side({
-	    selectedPosition: 'right',
-	    moveOptions: false,
-		labelsx: '待选区',
-		labeldx: '已选区',
-		platId: 'liOption'
-   });
-   $("#liEditOption").multiselect2side({ 
-	    selectedPosition: 'right',
-	    moveOptions: false,
-		labelsx: '待选区',
-		labeldx: '已选区',
-		platId: 'liEditOption'
-  });
-    
-   $("#liEditPlatOption").multiselect2side({
-	    selectedPosition: 'right',
-	    moveOptions: false,
-		labelsx: '待选区',
-		labeldx: '已选区',
-		platId: 'liEditPlatOption'
- }); 
+$(function () {
+    $("#liOption").multiselect2side({
+        selectedPosition: 'right',
+        moveOptions: false,
+        labelsx: '待选区',
+        labeldx: '已选区',
+        platId: 'liOption'
+    });
+    $("#liEditOption").multiselect2side({
+        selectedPosition: 'right',
+        moveOptions: false,
+        labelsx: '待选区',
+        labeldx: '已选区',
+        platId: 'liEditOption'
+    });
+
+    $("#liEditPlatOption").multiselect2side({
+        selectedPosition: 'right',
+        moveOptions: false,
+        labelsx: '待选区',
+        labeldx: '已选区',
+        platId: 'liEditPlatOption'
+    });
+    /*channel*/
+    $("#channelOpeion").multiselect2side({
+        selectedPosition: 'right',
+        moveOptions: false,
+        labelsx: '待选区',
+        labeldx: '已选区',
+        platId: 'channelOpeion'
+    });
 });

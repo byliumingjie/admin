@@ -9,9 +9,9 @@ echo Page_Lib::head($insert_html, '', null, true);
 <div id="content-header">
     <h1>渠道配置</h1>
     <div class="btn-group">
-        <a class="btn btn-success btn-large" title="批量发布"
+        <!--<a class="btn btn-success btn-large" title="批量发布"
            data-backdrop="static" id="addName">
-            <i class="icon-plus"></i>导入充值配置</a>
+            <i class="icon-plus"></i>导入充值配置</a>-->
         <a class="btn btn-large tip-bottom" title="添加用户"
            data-toggle="modal" data-backdrop="static" data-target="#addPayConfigModal" id="addPayConfigId">
             <i class="icon-plus"></i>添加配置</a>
@@ -22,7 +22,7 @@ echo Page_Lib::head($insert_html, '', null, true);
     <!-- 坐标系 -->
     <a href="/index/index" title="跳到首页" class="tip-bottom">
         <i class="icon-home"></i> 首页</a>
-    <a href="#" class="current">处理角色</a>
+    <a href="#" class="current">渠道配置</a>
 </div>
 <div class="container-fluid">
     <br>

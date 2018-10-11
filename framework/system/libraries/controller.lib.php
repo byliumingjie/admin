@@ -930,13 +930,14 @@ abstract class Controller
      * $file_uri = $_FILES ['filed'] ['name'];
      * $file_url = $_FILES ['filed'] ['tmp_name'];
      **/
-    public function request_upload_curls($upload_url = null, $mkdir_url = null)
+    public function request_upload_curls($filename, $upload_url = null, $path = null)
     {
-        $upload_url = empty($upload_url)?'http://192.168.181.133:9095':$upload_url;
-        $mkdir_url = empty($mkdir_url)?'D:\xampp\htdocs\admin\admin\logs\123.txt':$mkdir_url;
+        $upload_url = !empty(RES_URL) ? RES_URL : $upload_url;
+        $path = !empty(RES_PATH) ? RES_PATH . $filename : $path;
         $curl = curl_init();
+        log_message::info('path:::==='.$path.'===url'.$upload_url);
         // 引入库文件
-        $data = array('filed' => '@' . $mkdir_url);
+        $data = array('filed' => '@' . $path);
         // 获取图片的路径 + 图片名(上传图片地址)
         // 上传的服务地址，，所以记录上传的这个地址配置的路径是要执行第一段代码的在下部分就可以看到
         curl_setopt($curl, CURLOPT_URL, $upload_url);
@@ -950,6 +951,26 @@ abstract class Controller
         return $result;
     }
 
+    /***
+     * @param $filepatch
+     * @param $filename
+     * @param $string
+     * @return bool
+     */
+    public function mkdirFile($filepatch, $filename, $string)
+    {
+        if (is_array($string)) {
+            $string = json_encode($string,JSON_UNESCAPED_UNICODE);
+        }
+        if (file_exists($filepatch)) {
+
+            $myfile = fopen($filepatch . $filename, "w");
+            fwrite($myfile, $string);
+            return true;
+        }
+        log_message::info('mkdir file false...');
+        return false;
+    }
 
 }
 

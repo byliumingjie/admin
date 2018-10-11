@@ -41,6 +41,13 @@ $(function () {
                 if (name == null || name == "") {
                     continue;
                 }
+                if(name=="channel_id")
+                {
+                    value = $(this).parent().parent().find('[data-name=channel_id]').text();
+                    //(value);
+                    optionVerifySet("channelId",parseInt(value));
+
+                }
                 value = $(this).parent().parent().find('[data-name=' + name + ']').text();
                 $("#editpayconfigForm [name=" + name + "]").val(value);
             }
@@ -66,6 +73,19 @@ $(function () {
         });
 
     });
+
+    function optionVerifySet(byid = null, type = null, display = false, serverId = null) {
+        var count = $("#" + byid + " option").length;
+        for (var i = 0; i < count; i++) {
+            var optionstr = $("#" + byid).get(0).options[i].value;
+
+            if (optionstr == type) {
+                $("#" + byid).get(0).options[i].selected = true;
+                break;
+            }
+        }
+    }
+
     //
     $(".loadConfig").click(function () {
         var id = $(this).attr('data-value');
@@ -94,12 +114,32 @@ $(function () {
             success: function (result) {
                 alert(result.msg);
                 if (result.errcode == 0) {
-                    window.location.reload();
-                    //window.location.href = window.location.href;
+                    //window.location.reload();
+                    window.location.href = 'index';
                 }
             }
         });
 
     });
+    //请求状态信息
+    $("#tableExcel tr").each(function() {
+        var _this = $(this);
+        _this.find(".serverInfo").click(function() {
+            var form = $("#logInfoForm").serializeArray();
+            for(var i=0;i<form.length;i++){
+                var name = form[i].name;
 
+                if(name ==null ||name =="")
+                {
+                    continue;
+                }
+
+                var value = $(this).parent().parent().find('[data-name='+name+']').text();
+                $("#logInfoForm [name="+name+"]").val(value);
+
+            }
+            //$("#serverinfoModal input[name=id]").val(_this.attr("id"));
+            $("#loginfoModal").modal({backdrop:"static"}).modal('show');
+        });
+    });
 });

@@ -17,5 +17,13 @@ define('LOGDIRS_FILENAME', 'error.log'); // 日志目录
 define("LOG_SERVER_URL", dirname(dirname(dirname(__FILE__))) . "/logs/");
 
 #error info
-define('SUCCESS',0);
-define('FAILURE',-1);
+define('SUCCESS', 0);
+define('FAILURE', -1);
+
+#file upload url
+
+define('RES_URL', 'http://192.168.181.133:9095');
+define('RES_PATH', dirname(dirname(dirname($_SERVER['DOCUMENT_ROOT']))) . '/res/config/');
+# config file path
+//http://192.168.181.133/chuanqi_mofang12.json
+$patch = RES_PATH;

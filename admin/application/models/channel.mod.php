@@ -9,12 +9,14 @@ class Channel_Model extends Model
 
     private $table = 'tb_channel';
     private $db = null;
+    private static $mysql = null;
 
     public function __construct($region = null)
     {
         parent::__construct();
         if (!empty($region)) {
             $this->db = Mysql::database('', $region);
+            self::$mysql = Mysql::database('', $region);
         }
     }
 
@@ -72,9 +74,22 @@ class Channel_Model extends Model
         return false;
     }
 
-    public function byConfigIdInfo($id)
+    public static function channelList()
     {
-        $sql = 'SELECT * FROM ' . $this->table . ' where id=' . $id;
+        $sql = 'SELECT * FROM tb_channel';
+
+        if (self::$mysql->query($sql) && self::$mysql->rowcount() > 0) {
+            $rows = self::$mysql->fetch_all();
+            return $rows;
+        }
+        return false;
+    }
+
+    public function byChannelIdInfo($id)
+    {
+        $id = is_array($id) ? 'id in(' . implode(',', $id) . ')' : 'id=' . $id;
+
+        $sql = 'SELECT * FROM ' . $this->table . ' where ' . $id;
 
         if ($this->db->query($sql) && $this->db->rowcount() > 0) {
             $rows = $this->db->fetch_row();

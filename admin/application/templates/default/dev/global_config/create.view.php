@@ -1,217 +1,434 @@
-<?php 
-$insert_html  = Page_Lib::loadJs('global-activity','','dev');
-//$insert_html .= Page_Lib::loadJs('global-activity-file-load','','dev');;
-$insert_html.= Page_Lib::loadJs('server.list');
-$insert_html.= Page_Lib::loadJs('item');
+<?php
+$insert_html .= Page_Lib::loadJs('global-config', '', 'dev');
+$insert_html .= Page_Lib::loadJs('global-config-load-file', '', 'dev');
+$insert_html .= Page_Lib::loadCss('bootstrap-select.min');
+$insert_html .= Page_Lib::loadJs('ajaxupload');
+$insert_html .= Page_Lib::loadJs('loadmailfile');
+$insert_html .= Page_Lib::loadJs('mail');
 $insert_html .= Page_Lib::loadJs('multselect');
+$insert_html .= Page_Lib::loadJs('bootstrap-select');
 echo Page_Lib::head($insert_html);
 ?>
-<!-- 站内导航 BEGIN-->
+<!-- 站内导航 -->
 <div id="content-header">
-        <h1>全局活动管理</h1> <div class="btn-group">
-      	</div>
+    <h1>后台基本操作</h1>
+    <div class="btn-group">
+    </div>
 </div>
-<!-- top start -->
- <div id="breadcrumb">
+<div id="breadcrumb">
     <a href="/index/index" title="跳到首页" class="tip-bottom"><i class="icon-home"></i> 首页</a>
-    <a href="#" class="current">全局活动配置</a>
-    <a href="#" id="signalNavigation" data-placement="bottom" data-trigger="focus"> 
-    	<?php echo Page_Lib::getplatformInfo($_COOKIE['gzoneid'],$_SESSION['platformInfo']);?>	
-     	<i class="icon-question"></i></a>
- </div>
-<div class="container-fluid">					
-  <div class="row-fluid">
-    <div class="widget-box">
-    <div class="widget-title">
-		<span class="icon">
+    <a href="#" class="current">新建配置</a>
+    <a href="#" title="..."
+       data-placement="bottom" data-trigger="focus"
+       class="tip-bottom"><i class="icon-question-sign"></i></a>
+</div>
+
+<?php $channel_ary = Channel_Model::channelList(); ?>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="widget-box">
+            <div class="widget-title">
+	<span class="icon">
             <i class="icon-th"></i>
         </span>
-         <ul class="nav nav-tabs">
-             <li class="active"><a data-toggle="tab" href="#tab1">添加活动配置</a></li>                 
-         </ul>
-	</div> 
-	 
-        <div class="widget-content tab-content">
-	  <!-- 1页表格 正文 -->
-	    <?php 
- 			echo DevToolbox_Lib::ItemConfigHtml($itemListObject);
- 		?>
-            <div id="tab1" class="tab-pane active">
-                 <form class="form-horizontal"  method="POST" id="CreateActivityForm" > 
-                    <input type="hidden" name='SetactivityType' value="1"/>
-                    <table class="table  table-striped" > 
-                    <tbody>  
-                    <tr>
-							<td>
-								<div class="control-group">
-									<label class="control-label">*平台</label>
-									<div class="controls">
-									<select   name="platId" >
-									<?php  $platformOut = session::get('AllplatformInfo');?>									
-									<?php if (is_array($platformOut) && !empty($platformOut)) :?>
-									<?php foreach ($platformOut as $var):?>
-									<?php if((int)$var['type']===0){continue;}?>
-									<?php echo '<option value='.$var['type'].'>'.$var["platformname"].'</option>';?>
-									<?php endforeach;?>
-									<?php endif;?>
-									</select>
-									</div>
-								</div>
-							</td>
-							<td>
-							</td>
-						</tr>
-						 
-                    <tr>
-							<td>
-								<div class="control-group">
-									<label class="control-label">*活动名称</label>
-									<div class="controls">
-										<input type="text" class="form-control"  
-										placeholder="请以小于30字以内来进行描述" 
-										maxlength="30" name="title" >
-									</div>
-								</div>
-							</td>
-							<td>
-							</td>
-						</tr> 
-                    	<tr>
-							<td>
-								<div class="control-group">
-									<label class="control-label">*活动描述</label>
-									<div class="controls">
-									<textarea rows="5" cols="6"  
-									placeholder="请以小于60字以内来进行描述" 
-									maxlength="60" name="content"></textarea>
-										<!-- <input type="text" class="form-control" 
-										placeholder="请以小于60字以内来进行描述" 
-										> -->
-									</div>
-								</div>
-							</td>
-							<td>
-							</td>
-						</tr>
-                        <tr>
-							<td>
-								<div class="control-group">
-									<label class="col-md-3 control-label">*活动类型</label>
-									<div class="controls">
-									<!-- class="selectpicker" 
-										data-live-search="true" data-live-search-style="begins" -->
-										<?php if ($activityinfo):?>										
-										<select id="activityType" name="activityType">
-										<option value=0>--请选择活动类型--</option>
-										<?php foreach ($activityinfo as $var):?>		 
-											<option value=<?php echo $var['id']?>>
-											<?php echo $var['remarks'];?></option>
-										<?php endforeach;?>
-										</select>
-										<?php endif;?>
-									</div>
-								</div>
-							</td>
-							<td>
-							</td>
-						</tr>
-						<tr>
-                            <td>
-                                <div class="control-group ">
-                                	<label class="control-label">活动起始时间(时间戳秒)</label>
-                                    <label class="checkbox-inline">
-                                    <div class="controls ">
-						             <input type="text" name="starttimeDay" style="width:5%" placeholder="日"/>
-						             - <input type="text" name="starttimeHour" style="width:5%" placeholder="时"/>
-						             : <input type="text" name="starttimeMint" style="width:5%" placeholder="分"/>
-						             : <input type="text" name="starttimeSec" style="width:5%" placeholder="秒"/>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tab1">活动配置</a></li>
+                </ul>
+
+            </div>
+            <div class="widget-content tab-content">
+                <!-- 1页表格 正文 -->
+                <div id="tab1" class="tab-pane active">
+                    <form class="form-horizontal" method="POST" id="addPayConfigForm" onsubmit="return false;">
+                        <table class="table  table-striped">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="col-md-3 control-label">*游戏昵称</label>
+                                        <div class="controls">
+                                            <input type="text" style="width:62%" class="input-mini" name="pc_name"/>
+                                        </div>
                                     </div>
-                                    </label>
-                                </div>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="control-group ">
-                                	<label class="control-label">活动截止时间</label>
-                                    <label class="checkbox-inline">
-                                    <div class="controls ">
-						            <input type="text" name="endtimeDay" style="width:5%" placeholder="截至日"/>
-						            - <input type="text" name="endtimeHour" style="width:5%" placeholder="截至时"/>
-						            : <input type="text" name="endtimeMint" style="width:5%" placeholder="截至分"/>
-						            : <input type="text" name="endtimeSec" style="width:5%" placeholder="截至秒"/>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="control-label">*渠道</label>
+                                        <div class="controls">
+                                            <select class="form-control" id="channelOpeion" multiple="multiple"
+                                                    name="channel[]"
+                                                    size='10'>
+                                                <?php if (is_array($channel_ary) && !empty($channel_ary)) : ?>
+                                                    <?php foreach ($channel_ary as $server): ?>
+                                                        <?php echo '<option value="' . $server['id'] . '">' . $server["channel_name"] . '</option>'; ?>
+                                                    <?php endforeach; ?>
+                                                <?php endif; ?>
+                                            </select>
+                                        </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <!-- <tr>
+                                 <td>
+                                     <div class="control-group">
+                                         <label class="col-md-3 control-label">APP ID </label>
+                                         <div class="controls">
+                                             <input type="text" style="width:62%" class="input-mini" name="appid"/>
+                                         </div>
+                                     </div>
+                                 </td>
+                                 <td>
+                                 </td>
+                             </tr>-->
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="col-md-3 control-label">区服前缀:</label>
+                                        <div class="controls">
+                                            <input type="text" style="width:62%" class="input-mini"
+                                                   name="server_prefix"/>
+                                        </div>
                                     </div>
-                                    </label>
-                                </div>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="control-group ">
-                                	<label class="control-label">活动关闭时间</label>
-                                    <label class="checkbox-inline">
-                                    <div class="controls ">
-						              <input type="text" name="stoptimeDay" style="width:5%" placeholder="活动关闭日"/>
-						              - <input type="text" name="stoptimeHour" style="width:5%" placeholder="活动关闭时"/>
-						              : <input type="text" name="stoptimeMint" style="width:5%" placeholder="活动关闭分"/>
-						              : <input type="text" name="stoptimeSec" style="width:5%" placeholder="活动关闭秒"/>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="col-md-3 control-label">区服起始:</label>
+                                        <div class="controls">
+                                            <input type="text" style="width:62%" class="input-mini"
+                                                   name="server_min"/>
+                                        </div>
                                     </div>
-                                    </label>
-                                </div>
-                            </td>
-                            <td></td>
-                        </tr>
-                         <tr>
-                            <td>
-                                <div class="control-group ">
-                                	<label class="control-label">重置类型/时间点</label>
-                                    <label class="checkbox-inline">
-                                    <div class="controls ">
-                                     <select name="ResetType">
-                                     	<option>--请选择--</option>
-                                     	<option value=1>时间点</option>
-                                     	<option value=2>整点</option>
-                                     </select>       
-                                     <input type="text" class="form-control"  name ="ResetTime" placeholder="请以整形对应重置类型填写">
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="col-md-3 control-label">区服最大范围:</label>
+                                        <div class="controls">
+                                            <input type="text" style="width:62%" class="input-mini"
+                                                   name="server_max"/>
+                                        </div>
                                     </div>
-                                    </label>
-                                </div>
-                            </td> 
-                        </tr> 
-                        <tr>
-							<td>
-								<div class="control-group">
-									<div class="control-group">
-										<label class="col-md-3 control-label">配置条件:</label>
-										<div class="controls">
-											<span style="color:gray">可使用的配置条件为根据活动类型去填写的，需要填写对应的数值以及生产描述，
-											每条都需要填写对应的完成奖励。</span>
-										</div>
-									</div>
-								</div>
-							</td>
-							<td>
-							</td>
-						</tr>
-						  
-                        </tbody>
-                    </table>
-                    <div id="configRules">
-                     
-                    </div> 
-                </form>  
-                   <div style="text-align: center;">	
-                        <button  type="button" class="btn btn-success" id="Globactivitybtn" style="margin: auto;">保存</button>
-                    </div>              
-            </div> 
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <div class="control-group">
+                                            <label class="col-md-3 control-label">添加附件:</label>
+                                            <div class="controls">
+                                                <span style="color:gray">附件个数不能超过四个</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="checkbox-inline">
+                                            <div class="controls">
+                                                排行榜活动 : <input type="checkbox" value="ranking" name="checkbox[]"
+                                                               style="margin: 0px; padding: 0px">&nbsp;&nbsp;
+                                                起始时间:<input type="text" class=" datetimepicker" name="ranking_starttime"
+                                                            style="width:25%" placeholder="起始时间"/>-
+                                                <input type="text" class=" datetimepicker " name="ranking_endtime"
+                                                       style="width:25%" placeholder="截至时间"/>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="checkbox-inline">
+                                            <div class="controls">
+                                                抽奖活动 : <input type="checkbox" value="lottery" name="checkbox[]"
+                                                              style="margin: 0px; padding: 0px">&nbsp;&nbsp;
+                                                起始时间:<input type="text" class=" datetimepicker" name="lottery_starttime"
+                                                            style="width:25%" placeholder="起始时间"/>-
+                                                <input type="text" class=" datetimepicker " name="lottery_endtime"
+                                                       style="width:25%" placeholder="截至时间"/>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="checkbox-inline">
+                                            <div class="controls">
+                                                签到活动 : <input type="checkbox" value="signin" name="checkbox[]"
+                                                              style="margin: 0px; padding: 0px">&nbsp;&nbsp;
+                                                起始时间:<input type="text" class=" datetimepicker" name="signin_starttime"
+                                                            style="width:25%" placeholder="起始时间"/>-
+                                                <input type="text" class=" datetimepicker " name="signin_endtime"
+                                                       style="width:25%" placeholder="截至时间"/>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php //echo DevToolbox_Lib::mailModuleHtml($configinfo); ?>
+                            </tbody>
+                        </table>
+                        <?php //if(!empty($addPerMail)):?>
+                        <div style="text-align: center;">
+                            <button class="btn btn-success" id="addPayCofnigBtn" style="margin: auto;">保存</button>
+                        </div>
+                        <?php //endif;?>
+                    </form>
+                </div>
+                <!-- 2页表格 正文 -->
+                <div id="tab2" class="tab-pane ">
+                    <form class="form-horizontal" method="POST" id="saveSerMailForm" onsubmit="return false;">
+                        <table class="table  table-striped">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <div class="buttons">
+                                            <a title="导入用户" class="btn btn-success" id="loadUserBtn"><i
+                                                        class="icon-plus"></i> 导入批量用户</a>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td></td>
+                            </tr>
+                            <?php echo DevToolbox_Lib::mailModuleHtml($configinfo); ?>
+                            </tbody>
+                        </table>
+                    </form>
+
+                    <div style="text-align: center;">
+                        <button class="btn btn-success" id="saveSerBtn" style="margin: auto;">保存</button>
+                    </div>
+
+                </div>
+                <!-- 3页表格 正文 -->
+                <div id="tab3" class="tab-pane ">
+                    <form class="form-horizontal" method="POST" id="saveAllMailForm" onsubmit="return false;">
+                        <table class="table  table-striped">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <select class="form-control" id="liOption" multiple="multiple" name="sid[]"
+                                                size='10' style="width:150%">
+                                            <?php if (is_array($serverInfo) && !empty($serverInfo)) : ?>
+                                                <?php foreach ($serverInfo as $server): ?>
+                                                    <?php if ($server['type'] == 0) {
+                                                        continue;
+                                                    } ?>
+                                                    <?php echo '<option value="' . $server['type'] . '">' . $server["type"] . '服 ' . $server['platformname'] . '</option>'; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="control-group">
+                                        <label class="control-label">*筛选条件</label>
+                                        <label class="checkbox-inline">
+                                            <div class="controls">
+                                                角色等级段
+                                                <input type="text" class="  form-inline " name="minlevel"
+                                                       style="width:15%" placeholder="1"/>级-
+                                                <input type="text" class="  form-inline " name="maxlevel"
+                                                       style="width:15%" placeholder="100"/>级
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group ">
+                                        <label class="control-label">*邮件有效期时间</label>
+                                        <label class="checkbox-inline">
+                                            <div class="controls ">
+
+                                                <input type="text" class=" datetimepicker" name="starttime"
+                                                       style="width:25%" placeholder="起始时间"/>-
+                                                <input type="text" class=" datetimepicker " name="endtime"
+                                                       style="width:25%" placeholder="截至时间"/>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <?php echo DevToolbox_Lib::mailModuleHtml($configinfo); ?>
+                            </tbody>
+                        </table>
+                    </form>
+                    <div style="text-align: center;">
+                        <button class="btn btn-success" id="saveAllBtn" style="margin: auto;">保存</button>
+                    </div>
+                </div>
+
+                <!-- 4页表格 正文 -->
+                <div id="tab4" class="tab-pane ">
+                    <form class="form-horizontal" method="POST" id="saveReimburseMailForm"
+                          action="addReimburseMail"
+                          onsubmit="return false;">
+                        <table class="table  table-striped">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <select class="form-control" id="liEditOption" multiple="multiple" name="sid[]"
+                                                size='10' style="width:150%">
+                                            <?php if (is_array($serverInfo) && !empty($serverInfo)) : ?>
+                                                <?php foreach ($serverInfo as $server): ?>
+                                                    <?php if ($server['type'] == 0) {
+                                                        continue;
+                                                    } ?>
+                                                    <?php echo '<option value="' . $server['type'] . '">' . $server["type"] . '服 ' . $server['platformname'] . '</option>'; ?>
+                                                <?php endforeach; ?>
+                                            <?php endif; ?>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="control-group ">
+                                        <label class="control-label">*补偿类型</label>
+                                        <label class="checkbox-inline">
+                                            <div class="controls ">
+                                                <select class="form-control" name="HeadreviewType">
+                                                    <option value=''>--请选择补偿类型--</option>
+                                                    <option value=1>头像审核拒绝</option>
+                                                    <option value=2>头像审核通过</option>
+                                                </select>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <!-- <tr>
+                                <td>
+                                    <div class="control-group ">
+                                        <label class="control-label">*邮件有效期时间</label>
+                                        <label class="checkbox-inline">
+                                        <div class="controls ">
+
+                                                <input type="text" class=" datetimepicker" name="starttime" style="width:25%" placeholder="起始时间"/>-
+                                                <input type="text" class=" datetimepicker " name="endtime" style="width:25%" placeholder="截至时间"/>
+                                        </div>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr> -->
+                            <?php echo DevToolbox_Lib::mailModuleHtml($configinfo); ?>
+                            </tbody>
+                        </table>
+
+                    </form>
+
+                    <div style="text-align: center;">
+                        <button class="btn btn-success" id="saveReimburseBtn" style="margin: auto;">保存</button>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
-   </div>
- </div>
- 
-<!-- 版权info BEGIN -->
-<?php echo Page_Lib::footer(); ?>
-<!-- 版权info END -->
+</div>
+<?php
+echo Page_Lib::footer();
+?>
+<!-- 群发邮件用户批量导入 -->
+<div class="modal fade" id="addFileModal" tabindex="-1" role="dialog" aria-labelledby="addFileModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="addFileModalLabel">选择文件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="control-group">
+                    <label class="col-md-3 control-label">
+                        <input type="button" class="btn btn-success" value="导入txt文件" id="selector"/>
+                    </label>
+                    <div class="controls">
+                        <input type="text" readonly="readonly" value="" id="state"/>
+                    </div>
+                </div>
 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="addFileBtn">确认添加</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript">
+    //检查输入的值
+    function checkProp(value, type) {
+        if (value !== '') {
+            $.ajax({
+                type: 'POST',
+                url: "/mail/CheckProp",
+                data: 'id=' + value + '&type=' + type,
+                dataType: 'json',
+                success: function (result) {
+                    if (result.errcode != 0) {
+                        alert('输入的ID' + value + '无效');
+                        document.location.reload();
+                    }
+                }
+            });
+        }
+
+    }
+
+    var handleRegister = function () {
+
+        function format(state) {
+            if (!state.id) return state.text; // optgroup
+            return "<img class='flag' src='assets/img/flags/" + state.id.toLowerCase() + ".png'/>  " + state.text;
+        }
+
+
+        $("#select2_sample4").select2({
+            placeholder: '<i class="fa fa-map-marker"></i> Select a Country',
+            allowClear: true,
+            formatResult: format,
+            formatSelection: format,
+            escapeMarkup: function (m) {
+                return m;
+            }
+        });
+</script>

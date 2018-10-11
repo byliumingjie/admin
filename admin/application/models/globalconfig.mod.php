@@ -9,12 +9,23 @@ class GlobalConfig_Model extends Model
 
     private $table = 'tb_config';
     private $db = null;
+    private static $mysql;
+    public static $ACT_STATUS = [0 => '未开启', 1 => '已开启'];
+    public static $ACT_TYPE = [0 => '未上传', 1 => '已上传'];
+    public static $ACT_LIST = ['ranking' => '排行榜', 'lottery' => '抽奖', 'signin' => '签到'];
+    private static $gank_gamedb = 'ganksdk';
+    private static $gank_game_mysql = null;
 
     public function __construct($region = '')
     {
         parent::__construct();
+
+        $conn = Platfrom_Service::getServer(true, self::$gank_gamedb);
+        self::$gank_game_mysql = Mysql::database('', $conn);;
+
         if (!empty($region)) {
             $this->db = Mysql::database('', $region);
+            self::$mysql = Mysql::database('', $region);
         }
     }
 
@@ -29,14 +40,64 @@ class GlobalConfig_Model extends Model
         return $this->db->delete('game_activity', $where, $array);
     }
 
+    public function createAppTable($table_name)
+    {
+        $sql = 'CREATE TABLE `' . $table_name . '` (
+          `id` int(10) NOT NULL AUTO_INCREMENT,
+          `openid` varchar(255) DEFAULT NULL,
+          `channel_id` int(10) DEFAULT NULL,
+          `sid` int(10) DEFAULT NULL,
+          `create_at` datetime DEFAULT NULL,
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;';
+
+        if ($this->showAppTable($table_name)) {
+            return true;
+        }
+        if (self::$gank_game_mysql->query($sql)) {
+
+            return true;
+        }
+        return false;
+    }
+
+    public function showAppTable($table_name)
+    {
+        $result = self::$gank_game_mysql->query("SHOW TABLES LIKE '" . $table_name . "'");
+
+        $row = self::$gank_game_mysql->fetch_all();
+
+        if (1 == count($row)) {
+
+            return true;
+
+        } else {
+
+            return false;
+        }
+    }
+
+    public function dropAppTable($table_name)
+    {
+        $sql = 'DROP TABLE IF EXISTS ' . $table_name;
+
+        if (self::$gank_game_mysql->query($sql)) {
+
+            return true;
+        }
+        return false;
+    }
+
     /**
      * 记录活动
      * **/
     public function addConfigInfo($data, $setBatch = false)
     {
-        $fields = 'pc,channel_id,sign,create_at';
+        $fields = 'pc,channel_id,sign,server_prefix,
+        server_min,server_max,act_rule,desc,create_at';
 
         if ($this->db->insert($this->table, $data)) {
+            // return $this->db->get_insertlastid();
             return true;
         }
         return false;
@@ -357,10 +418,8 @@ class GlobalConfig_Model extends Model
      * @param string $id
      * @return boolean**
      */
-    public function reimburse_mail_up($data, $ServerId = NULL,
-                                      $ReimburseType = 1, $id = NULL)
+    public function reimburse_mail_up($data, $ServerId = NULL, $ReimburseType = 1, $id = NULL)
     {
-
         $where = ' ServerId=:ServerId AND ReimburseType=:ReimburseType';
 
         $prepare_array = array

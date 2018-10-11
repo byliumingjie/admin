@@ -472,7 +472,7 @@ function log_message($code, $request, $response, $statusCode = 0, $source = 3)
         } else {
             $Inrequest += $request;
         }
-        $requestOut = json_encode($Inrequest);
+        $requestOut = json_encode($Inrequest, JSON_UNESCAPED_UNICODE);
 
     } elseif (is_string($request)) {
         $inPonseOut['result'] = $response;
