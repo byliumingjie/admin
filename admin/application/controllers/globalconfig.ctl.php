@@ -184,7 +184,8 @@ class GlobalConfig_Controller extends Module_Lib
         if (isBlank($channel_ary) || isBlank($config_ary)) {
             $this->outputJson(FAILURE, '文件配置信息为空！');
         }
-        $channel_name = $pc . '_' . pinyin::getPinyin($channel_ary['channel_name']) . '.json';
+        //pinyin::getPinyin($channel_ary['channel_name'])
+        $channel_name = $pc . '.json';
         // 写入文件 方案1
         $this->mkdirFile(RES_PATH, $channel_name, $config_ary);
         $pc = $config_ary['pc'];
