@@ -40,7 +40,8 @@ echo Page_Lib::head($insert_html, '', null, true);
             <thead>
             <tr>
                 <th>Id</th>
-                <th>渠道</th>
+                <th>渠道名称</th>
+                <th>渠道码</th>
                 <th>token</th>
                 <th>创建时间</th>
                 <th>操作</th>
@@ -51,6 +52,7 @@ echo Page_Lib::head($insert_html, '', null, true);
                 <tr>
                     <td style="text-align: center;" data-name="id"><?php echo $invar['id']; ?></td>
                     <td style="text-align: center;" data-name='channel_name'><?php echo $invar['channel_name']; ?></td>
+                    <td style="text-align: center;" data-name='channel_name'><?php echo $invar['channel_code']; ?></td>
                     <td style="text-align: center;"
                         data-name="channel_token"><?php echo $invar['channel_token']; ?></td>
                     <td style="text-align: center;" data-name="create_at"><?php echo $invar['create_at']; ?></td>

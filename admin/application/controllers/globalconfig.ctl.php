@@ -184,6 +184,16 @@ class GlobalConfig_Controller extends Module_Lib
         if (isBlank($channel_ary) || isBlank($config_ary)) {
             $this->outputJson(FAILURE, '文件配置信息为空！');
         }
+        $channel_code = null;
+        log_message::info(json_encode($channel_ary));
+        foreach ($channel_ary as $var) {
+            if ($channel_code) {
+                $channel_code .= ',' . $var['channel_code'];
+            }else{
+            $channel_code .= $var['channel_code'];
+            }
+        }
+        $config_ary['channel_code'] = $channel_code;
         //pinyin::getPinyin($channel_ary['channel_name'])
         $channel_name = $pc . '.json';
         // 写入文件 方案1

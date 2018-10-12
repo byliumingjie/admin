@@ -4,12 +4,13 @@
  * 框架装载器
  *
  */
-final class FrameWork {
+final class FrameWork
+{
 
     private $controllername = '';
     private $methodname = '';
     private $argumentarray = array();
-    private $controllerDir='';
+    private $controllerDir = '';
 
     /* static public function &instance() {
       static $obj;
@@ -20,14 +21,16 @@ final class FrameWork {
       }
      */
 
-    public function __construct() {
-        
+    public function __construct()
+    {
+
     }
 
-    private function dispatch() {
+    private function dispatch()
+    {
         $class = ucfirst($this->controllername) . '_Controller';
         if (OPEN_AUTOLOAD === false) {
-            load_controller($this->controllername,'controllers/'.$this->controllerDir);
+            load_controller($this->controllername, 'controllers/' . $this->controllerDir);
             if (!class_exists($class, false))
                 throw new NotFoundException(0, "{$class};控制器类不存在");
         }
@@ -53,14 +56,15 @@ final class FrameWork {
         }
     }
 
-    private function autoload($class,$version = FALSE) {
+    private function autoload($class, $version = FALSE)
+    {
         if (class_exists($class, false))
             return;
 
         if ($class) {
             $name = strtolower(substr($class, 0, 2));
             if ($name == 'pb') {
-                $res = load_extend("pb_proto_" . $class,$version);
+                $res = load_extend("pb_proto_" . $class, $version);
                 if ($res === false) {
                     throw new NotFoundException(0, "autoload加载的pb: {$class} 不存在");
                 }
@@ -69,13 +73,13 @@ final class FrameWork {
         }
 
         if ($pos = strrpos($class, '_')) {
-            
+
             $name = strtolower(substr($class, 0, $pos));
             $case = strtolower(substr($class, $pos + 1));
 
             switch ($case) {
                 case 'controller':
-                    $res = load_controller($name,$this->controllerDir);
+                    $res = load_controller($name, $this->controllerDir);
                     if ($res === false) {
                         throw new NotFoundException(0, "autoload加载的控制器 {$name} 不存在");
                     }
@@ -115,16 +119,17 @@ final class FrameWork {
         }
     }
 
-    public function run($argumentarray = array()) {
+    public function run($argumentarray = array())
+    {
 
-		$_getC=isset($_GET['c']) ? trim($_GET['c']) : '';
-		if (false !==($pos = strrpos($_getC, '-'))) {
-				list($this->controllerDir, $this->controllername) = explode("-",$_getC);
-		}else{
-				$this->controllername = $_getC;
-		}
-		
-        
+        $_getC = isset($_GET['c']) ? trim($_GET['c']) : '';
+        if (false !== ($pos = strrpos($_getC, '-'))) {
+            list($this->controllerDir, $this->controllername) = explode("-", $_getC);
+        } else {
+            $this->controllername = $_getC;
+        }
+
+
         $this->methodname = isset($_GET['a']) ? trim($_GET['a']) : '';
         $this->argumentarray = $argumentarray;
 
@@ -149,7 +154,7 @@ final class FrameWork {
                 $_GET['a'] = DEFAULT_CONTROLLER;
             } else {
                 if (false === mb_eregi('^[a-z0-9_]+$', $this->methodname))
-                    throw new NotFoundException(0, '传入一个非法的动作名.'.$this->methodname);
+                    throw new NotFoundException(0, '传入一个非法的动作名.' . $this->methodname);
 
                 if ($this->methodname{0} == '_')
                     throw new NotFoundException(0, '方法首字母不能为下划线.');
@@ -172,7 +177,8 @@ final class FrameWork {
         }
     }
 
-    public function run_driver() {
+    public function run_driver()
+    {
         if (OPEN_AUTOLOAD === true) {
             $res = spl_autoload_register(array($this, 'autoload'));
             if ($res === false)

@@ -6,7 +6,7 @@ class Account_Controller extends Module_Lib {
 
 	// 入口
     public function index()
-    {	 	
+    {
      	$data = array();    	
 	    $sid = $_POST['sid'];
 	 	$userid = $_POST['userid'];	

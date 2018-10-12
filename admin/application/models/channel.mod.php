@@ -92,7 +92,7 @@ class Channel_Model extends Model
         $sql = 'SELECT * FROM ' . $this->table . ' where ' . $id;
 
         if ($this->db->query($sql) && $this->db->rowcount() > 0) {
-            $rows = $this->db->fetch_row();
+            $rows = $this->db->fetch_all();
             return $rows;
         }
         return false;

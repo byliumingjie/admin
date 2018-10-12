@@ -37,6 +37,7 @@ class Channel_Controller extends Module_Lib
         $config_out = [
             'channel_name' => $channel_name,
             'channel_token' => xxtea_lib::Encrypt($channel_token),
+            'channel_code'=>pinyin::getPinyin($channel_name)
         ];
 
         log_message::info(json_encode($config_out));
